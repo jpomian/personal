@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Compass } from 'lucide-react';
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -17,7 +19,7 @@ export default function Hero() {
     canvas.height = window.innerHeight
 
     const particles: Particle[] = []
-    const particleCount = 100
+    const particleCount = 120
 
     class Particle {
       x: number
@@ -46,7 +48,7 @@ export default function Hero() {
 
       draw() {
         if (!ctx) return
-        ctx.fillStyle = "rgba(255, 255, 255, 0.5)"
+        ctx.fillStyle = "rgba(255, 255, 255, 0.6)"
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -86,12 +88,12 @@ export default function Hero() {
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full bg-black" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="mb-6 text-6xl font-bold tracking-tighter sm:text-7xl lg:text-8xl"
+          className="mb-6 text-6xl font-bold tracking-tight sm:text-7xl lg:text-8xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          JANE DOE
+          JĘDRZEJ POMIANOWSKI
         </motion.h1>
         <motion.p
           className="max-w-[600px] text-lg text-gray-400 sm:text-xl"
@@ -99,8 +101,24 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Visual Artist & Creative Director
+          Designer. Deweloper. Architekt.
         </motion.p>
+
+        <motion.button
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
+            <p className="flex flex-row items-center text-lg">
+              <Compass className="mr-3 w-12 h-12" />
+              Eksploruj moje prace
+            </p>
+          </Button>
+
+        </motion.button>
+
+
       </div>
     </div>
   )

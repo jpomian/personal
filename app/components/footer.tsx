@@ -3,13 +3,13 @@ export default function Footer() {
     <footer className="border-t border-zinc-800 bg-black py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-sm text-gray-400">© {new Date().getFullYear()} Jane Doe. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© {new Date().getFullYear()} Jędrzej Pomianowski. Wszelkie prawa zastrzeżone.</p>
           <div className="flex gap-6">
-            <a href="#" className="text-gray-400 hover:text-white">
-              Instagram
+            <a href="https://github.com/jpomian" className="text-gray-400 hover:text-white">
+              Github
             </a>
-            <a href="#" className="text-gray-400 hover:text-white">
-              Twitter
+            <a href="https://etherscan.io/address/0x0E522E6ad7Ad2C2515a3bb914e66C350537d9D7a" className="text-gray-400 hover:text-white">
+              Etherscan
             </a>
             <a href="#" className="text-gray-400 hover:text-white">
               LinkedIn
