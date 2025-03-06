@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Compass } from 'lucide-react';
+import Link from 'next/link'
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -108,13 +109,25 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
+          className="flex flex-row gap-8"
         >
-          <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
-            <p className="flex flex-row items-center text-lg">
-              <Compass className="mr-3 w-12 h-12" />
-              Eksploruj moje prace
-            </p>
-          </Button>
+          <Link href={"/portfolio"}>
+            <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
+              <p className="flex flex-row items-center text-lg">
+                <Compass className="mr-3 w-12 h-12" />
+                Eksploruj moje prace
+              </p>
+            </Button>
+          </Link>
+
+          <Link href={"/info"}>
+            <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
+              <p className="flex flex-row items-center text-lg">
+                <Compass className="mr-3 w-12 h-12" />
+                Zobacz zdjęcie
+              </p>
+            </Button>
+          </Link>
 
         </motion.button>
 
