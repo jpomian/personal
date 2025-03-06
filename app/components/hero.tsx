@@ -2,8 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Compass } from 'lucide-react';
+import { Compass, Phone } from 'lucide-react';
 import Link from 'next/link'
 
 export default function Hero() {
@@ -89,7 +88,7 @@ export default function Hero() {
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full bg-black" />
       <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
         <motion.h1
-          className="mb-6 text-6xl font-bold tracking-tight sm:text-7xl lg:text-8xl"
+          className="mb-6 text-6xl font-bold tracking-tight sm:text-6xl lg:text-8xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -105,31 +104,39 @@ export default function Hero() {
           Designer. Deweloper. Architekt.
         </motion.p>
 
-        <motion.button
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-row gap-8"
-        >
-          <Link href={"/portfolio"}>
-            <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
-              <p className="flex flex-row items-center text-lg">
-                <Compass className="mr-3 w-12 h-12" />
+        <div className="flex flex-row gap-12 mt-16">
+
+          <motion.button
+            className="px-6 py-3 border border-gray-200/80 rounded-lg group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link href={"/portfolio"}>
+              <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
+                <Compass className="mr-3 w-6 h-6 transition-all duration-300 group-hover:scale-90" />
                 Eksploruj moje prace
               </p>
-            </Button>
-          </Link>
+            </Link>
+          </motion.button>
 
-          <Link href={"/info"}>
-            <Button type="submit" className="bg-black/80 text-shadow-md shadow-white lg-rounded-lg mt-20">
-              <p className="flex flex-row items-center text-lg">
-                <Compass className="mr-3 w-12 h-12" />
-                Zobacz zdjęcie
+
+          <motion.button
+            className="px-6 py-3 border border-gray-200/80 rounded-lg group"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <Link href={"/info"}>
+              <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
+                <Phone className="mr-3 w-6 h-6 transition-all duration-300 group-hover:scale-90" />
+                Skontaktuj się
               </p>
-            </Button>
-          </Link>
+            </Link>
+          </motion.button>
 
-        </motion.button>
+
+        </div>
 
 
       </div>
