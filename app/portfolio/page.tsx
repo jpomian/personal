@@ -90,10 +90,10 @@ export default function Portfolio() {
   return (
     <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black  text-gray-100 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
-      <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">
-            <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-            <span>Powrót</span>
-          </Link>
+        <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">
+          <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
+          <span>Powrót</span>
+        </Link>
         <header className="flex flex-col items-center justify-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
             Portfolio
@@ -157,10 +157,17 @@ function ProjectCard({ project }: { project: Project }) {
     <Card className="bg-gray-900 border-gray-800 overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 hover:border-purple-500/50">
       <div className="flex flex-col md:flex-row">
         <div className="relative md:w-1/3">
-          <div className="absolute top-3 right-3 bg-gray-950/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center z-10">
-            <Clock className="w-4 h-4 mr-1 text-purple-400" />
-            <span className="text-sm font-medium">{project.estimatedTime}</span>
+          <div className="group flex relative">
+            <div className="absolute top-3 right-3 bg-gray-950/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center z-10">
+              <Clock className="w-4 h-4 mr-1 text-purple-400" />
+              <span className="text-sm font-medium">{project.estimatedTime}</span>
+              <span className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
+    absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center">
+                Czas w jakim<br />wykonano projekt.
+              </span>
+            </div>
           </div>
+
           <Image
             src={project.image || "/placeholder.svg"}
             alt={project.name}
