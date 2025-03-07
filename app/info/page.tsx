@@ -2,8 +2,10 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Mail, Phone, Github, Linkedin, Twitter, MapPin, ArrowLeft } from "lucide-react"
-import Link from "next/link"
+import { Mail, Phone, Github, Linkedin, MapPin, ArrowLeft } from "lucide-react"
+import Etherscan from '../../assets/etherscan.png'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export default function ContactWithParticles() {
   const canvasRef = useRef<HTMLCanvasElement>(null)
@@ -111,7 +113,7 @@ export default function ContactWithParticles() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Przejdźmy na łącza
+              Hej!
             </motion.h1>
             <motion.p
               className="text-gray-400 mt-4"
@@ -179,23 +181,29 @@ export default function ContactWithParticles() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.7 }}
             >
-              <p className="mb-4 text-sm text-gray-400">Połącz się przez media społecznościowe</p>
+              <p className="mb-4 text-center text-sm text-gray-400">Możesz znaleźć mnie tutaj:</p>
               <div className="flex items-center justify-center space-x-6">
-                <Link href="https://github.com" target="_blank" rel="noopener noreferrer" className="group">
+                <a href="https://github.com/jpomian" target="_blank" rel="noopener noreferrer" className="group">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 transition-colors group-hover:bg-gray-700">
                     <Github className="h-5 w-5 text-gray-300" />
                   </div>
-                </Link>
-                <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="group">
+                </a>
+                <a href="https://www.linkedin.com/in/jpomian/" target="_blank" rel="noopener noreferrer" className="group">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 transition-colors group-hover:bg-gray-700">
                     <Linkedin className="h-5 w-5 text-gray-300" />
                   </div>
-                </Link>
-                <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="group">
+                </a>
+                <a href="https://etherscan.io/address/0x0E522E6ad7Ad2C2515a3bb914e66C350537d9D7a" target="_blank" rel="noopener noreferrer" className="group">
                   <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 transition-colors group-hover:bg-gray-700">
-                    <Twitter className="h-5 w-5 text-gray-300" />
+                    <Image
+                    src={Etherscan}
+                    alt='Etherscan'
+                    className="h-5 w-5 text-gray-300 object-contain"
+                    />
                   </div>
-                </Link>
+                </a>
+                
+                
               </div>
             </motion.div>
           </div>

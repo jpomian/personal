@@ -1,17 +1,25 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
+import Link from 'next/link'
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Clock, Calendar } from "lucide-react"
+import { Clock, Calendar, ArrowLeft } from "lucide-react"
+
+import nieruchomosci from '../../assets/thumbnails/nieruchomsci.png'
+import gogworld from '../../assets/thumbnails/gogworld.png'
+import veriflex from '../../assets/thumbnails/veriflex.png'
+import biohazard from '../../assets/thumbnails/biohazard.png'
+import forge from '../../assets/thumbnails/2forge.png'
+import Footer from "../components/footer"
 
 interface Project {
   id: number
   name: string
   description: string
-  image: string
+  image: string | StaticImageData
   releaseDate: string
   estimatedTime: string
   tags: string[]
@@ -26,62 +34,52 @@ export default function Portfolio() {
       id: 1,
       name: "Nieruchomości pod parasolem",
       description: "Strona internetowa firmy Nieruchomości pod parasolem. Zawiera najważniejsze informacje firmy wraz z FAQ, cennikiem oraz dynamicznym interfejsem z ofertami nieruchomości.",
-      image: "/placeholder.svg?height=300&width=500",
+      image: nieruchomosci,
       releaseDate: "Luty 2025",
-      estimatedTime: "4 weeks",
-      tags: ["React", "Node.js", "NextJS", "Tailwind CSS", "Redix"],
+      estimatedTime: "4 tygodnie",
+      tags: ["React", "NextJS", "Tailwind CSS", "Cheerio", "Redix"],
       category: "trad",
     },
     {
       id: 2,
-      name: "Task Management App",
+      name: "GoG World",
       description:
-        "A productivity application for organizing tasks with drag-and-drop functionality and team collaboration.",
-      image: "/placeholder.svg?height=300&width=500",
-      releaseDate: "January 2023",
-      estimatedTime: "3 weeks",
-      tags: ["React", "Firebase", "Tailwind CSS"],
+        "Katalog wszystkich tokenów NFT z kolekcji Guild of Guardians Avatars. Pełna kolekcja wszystkich 10.000 cyfrowych tokenów wraz z ich metadanymi i rankingiem w oparciu o ich rzadkość.",
+      image: gogworld,
+      releaseDate: "Grudzień 2024",
+      estimatedTime: "6 tygodni",
+      tags: ["React", "TypeScript", "NextJS", "Tailwind CSS", "Immutable SDK"],
       category: "blockchain",
     },
     {
       id: 3,
-      name: "Fitness Tracker",
-      description: "A trad application for tracking workouts, nutrition, and progress with data visualization.",
-      image: "/placeholder.svg?height=300&width=500",
-      releaseDate: "November 2022",
-      estimatedTime: "6 weeks",
-      tags: ["React Native", "TypeScript", "Firebase"],
-      category: "trad",
-    },
-    {
-      id: 4,
-      name: "Weather Dashboard",
-      description: "A real-time weather application with forecasting, location-based services, and interactive maps.",
-      image: "/placeholder.svg?height=300&width=500",
-      releaseDate: "September 2022",
-      estimatedTime: "2 weeks",
-      tags: ["JavaScript", "OpenWeather API", "Chart.js"],
+      name: "VeriFlex",
+      description: "Zwycięska aplikacja wykonana w ramach Franklin Templeton Blockchain Contest. Po podłączeniu portfela, aplikacja oferuje generacje tokenów przywiązanych do duszy (SBT).",
+      image: veriflex,
+      releaseDate: "Czerwiec 2024",
+      estimatedTime: "3 tygodnie",
+      tags: ["React", "TypeScript", "Chakra UI", "RainbowKit", "Hardhat", "Circom"],
       category: "blockchain",
     },
     {
-      id: 5,
-      name: "AI Content Generator",
-      description:
-        "A tool that leverages machine learning to generate blog posts, social media content, and marketing copy.",
-      image: "/placeholder.svg?height=300&width=500",
-      releaseDate: "July 2022",
-      estimatedTime: "8 weeks",
-      tags: ["Python", "TensorFlow", "React", "FastAPI"],
+      id: 4,
+      name: "Portal Biohazard",
+      description: "Strona przeznaczona dla graczy serwera w grze Counter Strike 1.6. Strona zawiera kluczowe informacje takie jak regulamin, pula rozgrywanych map czy statystyki graczy na żywo.",
+      image: biohazard,
+      releaseDate: "Listopad 2023",
+      estimatedTime: "2 tygodnie",
+      tags: ["HTML", "CSS", "JavaScript", "MySQL", "PHP"],
       category: "trad",
     },
     {
-      id: 6,
-      name: "Inventory Management System",
-      description: "A comprehensive solution for tracking inventory, managing suppliers, and generating reports.",
-      image: "/placeholder.svg?height=300&width=500",
-      releaseDate: "May 2022",
-      estimatedTime: "5 weeks",
-      tags: ["Vue.js", "Node.js", "PostgreSQL"],
+      id: 5,
+      name: "2Forge",
+      description:
+        "Platforma wymiany fizycznych dóbr kolekcjonerskich. Każdy produkt sprzedany na platformie 2Forge otrzymuje e-paragon zapisany wewnątrz łańcucha bloków.",
+      image: forge,
+      releaseDate: "Czerwiec 2023",
+      estimatedTime: "8 tygodni",
+      tags: ["React", "NextJS", "TypeScript", "Hardhat", "Solidity"],
       category: "blockchain",
     },
   ]
@@ -90,14 +88,22 @@ export default function Portfolio() {
     activeTab === "all" ? projects : projects.filter((project: Project) => project.category === activeTab)
 
   return (
-    <div className="dark min-h-screen bg-gray-950 text-gray-100 p-6 md:p-10">
+    <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black  text-gray-100 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
+      <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">
+            <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
+            <span>Powrót</span>
+          </Link>
         <header className="flex flex-col items-center justify-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
             Portfolio
           </h1>
           <p className="text-gray-400 text-center text-lg max-w-2xl">
             Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (Web 3), oraz aplikacje tradycyjne bez integracji z blockchainem (Web 2).
+          </p>
+
+          <p className="text-gray-400/60 text-center text-md max-w-2xl mt-6">
+            Szczegóły projektów chwilowo niedostępne. Za utrudnienia przepraszamy.
           </p>
         </header>
 
@@ -141,6 +147,7 @@ export default function Portfolio() {
           </TabsContent>
         </Tabs>
       </div>
+      <Footer />
     </div>
   )
 }
@@ -186,9 +193,11 @@ function ProjectCard({ project }: { project: Project }) {
           </CardContent>
 
           <CardFooter className="pt-0">
-            <button className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
-              Zobacz więcej →
-            </button>
+            <Link href={"/soon"}>
+              <button className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
+                Zobacz więcej →
+              </button>
+            </Link>
           </CardFooter>
         </div>
       </div>
