@@ -1,43 +1,51 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Image, { StaticImageData } from "next/image"
-import Link from 'next/link'
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Clock, Calendar, ArrowLeft } from "lucide-react"
+import { useState } from "react";
+import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Clock, Globe, Calendar, ArrowLeft } from "lucide-react";
 
-import nieruchomosci from '../../assets/thumbnails/nieruchomsci.png'
-import gogworld from '../../assets/thumbnails/gogworld.png'
-import veriflex from '../../assets/thumbnails/veriflex.png'
-import biohazard from '../../assets/thumbnails/biohazard.png'
-import forge from '../../assets/thumbnails/2forge.png'
-import Footer from "../components/footer"
+import nieruchomosci from "../../assets/thumbnails/nieruchomsci.png";
+import gogworld from "../../assets/thumbnails/gogworld.png";
+import veriflex from "../../assets/thumbnails/veriflex.png";
+import biohazard from "../../assets/thumbnails/biohazard.png";
+import forge from "../../assets/thumbnails/2forge.png";
+import Footer from "../components/footer";
 
 interface Project {
-  id: number
-  name: string
-  description: string
-  image: string | StaticImageData
-  releaseDate: string
-  estimatedTime: string
-  tags: string[]
-  category: string
+  id: number;
+  name: string;
+  description: string;
+  image: string | StaticImageData;
+  releaseDate: string;
+  estimatedTime: string;
+  tags: string[];
+  url: string;
+  category: string;
 }
 
 export default function Portfolio() {
-  const [activeTab, setActiveTab] = useState("all")
+  const [activeTab, setActiveTab] = useState("all");
 
   const projects: Project[] = [
     {
       id: 1,
       name: "Nieruchomości pod parasolem",
-      description: "Strona internetowa firmy Nieruchomości pod parasolem. Zawiera najważniejsze informacje firmy wraz z FAQ, cennikiem oraz dynamicznym interfejsem z ofertami nieruchomości.",
+      description:
+        "Strona internetowa firmy Nieruchomości pod parasolem. Zawiera najważniejsze informacje firmy wraz z FAQ, cennikiem oraz dynamicznym interfejsem z ofertami nieruchomości.",
       image: nieruchomosci,
       releaseDate: "Luty 2025",
       estimatedTime: "4 tygodnie",
       tags: ["React", "NextJS", "Tailwind CSS", "Cheerio", "Redix"],
+      url: "https://nieruchomoscipodparasolem.pl",
       category: "trad",
     },
     {
@@ -49,26 +57,38 @@ export default function Portfolio() {
       releaseDate: "Grudzień 2024",
       estimatedTime: "6 tygodni",
       tags: ["React", "TypeScript", "NextJS", "Tailwind CSS", "Immutable SDK"],
+      url: "https://gogworld.vercel.app",
       category: "blockchain",
     },
     {
       id: 3,
       name: "VeriFlex",
-      description: "Zwycięska aplikacja wykonana w ramach Franklin Templeton Blockchain Contest. Po podłączeniu portfela, aplikacja oferuje generacje tokenów przywiązanych do duszy (SBT).",
+      description:
+        "Zwycięska aplikacja wykonana w ramach Franklin Templeton Blockchain Contest. Po podłączeniu portfela, aplikacja oferuje generacje tokenów przywiązanych do duszy (SBT).",
       image: veriflex,
       releaseDate: "Czerwiec 2024",
       estimatedTime: "3 tygodnie",
-      tags: ["React", "TypeScript", "Chakra UI", "RainbowKit", "Hardhat", "Circom"],
+      tags: [
+        "React",
+        "TypeScript",
+        "Chakra UI",
+        "RainbowKit",
+        "Hardhat",
+        "Circom",
+      ],
+      url: "https://veriflex.vercel.app",
       category: "blockchain",
     },
     {
       id: 4,
       name: "Portal Biohazard",
-      description: "Strona przeznaczona dla graczy serwera w grze Counter Strike 1.6. Strona zawiera kluczowe informacje takie jak regulamin, pula rozgrywanych map czy statystyki graczy na żywo.",
+      description:
+        "Strona przeznaczona dla graczy serwera w grze Counter Strike 1.6. Strona zawiera kluczowe informacje takie jak regulamin, pula rozgrywanych map czy statystyki graczy na żywo.",
       image: biohazard,
       releaseDate: "Listopad 2023",
       estimatedTime: "2 tygodnie",
       tags: ["HTML", "CSS", "JavaScript", "MySQL", "PHP"],
+      url: "https://csbiohazard.vercel.app",
       category: "trad",
     },
     {
@@ -80,17 +100,23 @@ export default function Portfolio() {
       releaseDate: "Czerwiec 2023",
       estimatedTime: "8 tygodni",
       tags: ["React", "NextJS", "TypeScript", "Hardhat", "Solidity"],
+      url: "https://2forge.vercel.app",
       category: "blockchain",
     },
-  ]
+  ];
 
   const filteredProjects: Project[] =
-    activeTab === "all" ? projects : projects.filter((project: Project) => project.category === activeTab)
+    activeTab === "all"
+      ? projects
+      : projects.filter((project: Project) => project.category === activeTab);
 
   return (
     <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black  text-gray-100 p-6 md:p-10">
       <div className="max-w-7xl mx-auto">
-        <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">
+        <Link
+          href="/"
+          className="inline-flex text-gray-400 hover:text-white transition-colors group"
+        >
           <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
           <span>Powrót</span>
         </Link>
@@ -99,11 +125,13 @@ export default function Portfolio() {
             Portfolio
           </h1>
           <p className="text-gray-400 text-center text-lg max-w-2xl">
-            Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (Web 3), oraz aplikacje tradycyjne bez integracji z blockchainem (Web 2).
+            Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (Web 3),
+            oraz aplikacje tradycyjne bez integracji z blockchainem (Web 2).
           </p>
 
           <p className="text-gray-400/60 text-center text-md max-w-2xl mt-6">
-            Szczegóły projektów chwilowo niedostępne. Za utrudnienia przepraszamy.
+            Przycisk <span className="italic mr-1">Zobacz więcej</span>{" "}
+            przekierowuje do strony projektu.
           </p>
         </header>
 
@@ -149,7 +177,7 @@ export default function Portfolio() {
       </div>
       <Footer />
     </div>
-  )
+  );
 }
 
 function ProjectCard({ project }: { project: Project }) {
@@ -158,12 +186,17 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="flex flex-col md:flex-row">
         <div className="relative md:w-1/3">
           <div className="group flex relative">
-            <div className="absolute top-3 right-3 bg-gray-950/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center z-10">
-              <Clock className="w-4 h-4 mr-1 text-purple-400" />
-              <span className="text-sm font-medium">{project.estimatedTime}</span>
-              <span className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
-    absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center">
-                Czas w jakim<br />wykonano projekt.
+            <div className="absolute top-3 right-3 flex items-center z-10">
+              <Link href={project.url}>
+                <div className="bg-gray-800/80 rounded-full p-1 mr-1 backdrop-blur-sm">
+                  <Globe className="w-6 h-6 text-gray-100" />
+                </div>
+              </Link>
+              <span
+                className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
+        absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center"
+              >
+                Odwiedź stronę
               </span>
             </div>
           </div>
@@ -173,13 +206,29 @@ function ProjectCard({ project }: { project: Project }) {
             alt={project.name}
             width={500}
             height={300}
-            className="w-full h-60 md:h-full object-cover transition-transform duration-500 hover:scale-105"
+            className="w-full h-60 md:h-full object-cover transition-transform duration-500"
           />
         </div>
 
         <div className="md:w-2/3 flex flex-col">
+          <div className="group flex relative">
+            <div className="absolute top-3 right-3 bg-gray-950/80 backdrop-blur-sm px-3 py-1 rounded-full flex items-center z-10">
+              <Clock className="w-4 h-4 mr-1 text-purple-400" />
+              <span className="text-sm font-medium">
+                {project.estimatedTime}
+              </span>
+              <span
+                className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
+    absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center"
+              >
+                Czas wykonania <br /> projektu
+              </span>
+            </div>
+          </div>
           <CardHeader className="pb-2">
-            <h3 className="text-2xl font-bold tracking-tight">{project.name}</h3>
+            <h3 className="text-2xl font-bold tracking-tight">
+              {project.name}
+            </h3>
           </CardHeader>
 
           <CardContent className="pb-4 flex-grow">
@@ -189,10 +238,13 @@ function ProjectCard({ project }: { project: Project }) {
             </div>
             <p className="text-gray-400 mb-4 text-lg">{project.description}</p>
 
-
             <div className="flex flex-wrap gap-2">
               {project.tags.map((tag: string) => (
-                <Badge key={tag} variant="secondary" className="bg-gray-800 hover:bg-gray-700 text-purple-300">
+                <Badge
+                  key={tag}
+                  variant="secondary"
+                  className="bg-gray-800 hover:bg-gray-700 text-purple-300"
+                >
                   {tag}
                 </Badge>
               ))}
@@ -200,15 +252,14 @@ function ProjectCard({ project }: { project: Project }) {
           </CardContent>
 
           <CardFooter className="pt-0">
-            <Link href={"/soon"}>
+            <a href={project.url}>
               <button className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
                 Zobacz więcej →
               </button>
-            </Link>
+            </a>
           </CardFooter>
         </div>
       </div>
     </Card>
-  )
+  );
 }
-
