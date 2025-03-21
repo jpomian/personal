@@ -115,8 +115,8 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Link href={"/portfolio"}>
-              <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
-                <Compass className="mr-3 w-6 h-6 transition-all duration-300 group-hover:scale-90" />
+              <p className="flex flex-row items-center text-lg transition-all group-hover:text-white/60">
+                <Compass className="mr-3 w-6 h-6 group-hover:scale-105" />
                 Eksploruj moje prace
               </p>
             </Link>
@@ -131,7 +131,7 @@ export default function Hero() {
           >
             <Link href={"/info"}>
               <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
-                <Phone className="mr-3 w-6 h-6 transition-all duration-300 group-hover:scale-90" />
+                <Phone className="mr-3 w-6 h-6 group-hover:scale-105" />
                 Skontaktuj się
               </p>
             </Link>

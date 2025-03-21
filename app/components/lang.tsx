@@ -20,7 +20,7 @@ export default function LanguageSelector() {
         <li>
           <a
             href={plUrl}
-            className={!isEnglish ? "text-red-600 cursor-default" : "text-white"}
+            className={!isEnglish ? "text-red-600 cursor-default" : "text-white hover:text-gray-400 duration-300"}
             aria-current={!isEnglish ? "page" : undefined}
           >
             PL
@@ -29,7 +29,7 @@ export default function LanguageSelector() {
         <li>
           <a
             href={enUrl}
-            className={isEnglish ? "text-blue-600 cursor-default" : "text-white"}
+            className={isEnglish ? "text-blue-600 cursor-default" : "text-white hover:text-gray-400 duration-300"}
             aria-current={isEnglish ? "page" : undefined}
           >
             EN
