@@ -34,7 +34,7 @@ export default function Portfolio() {
           </p>
 
           <p className="text-gray-400/60 text-center text-md max-w-2xl mt-6">
-            Przycisk <span className="italic mr-1">Zobacz więcej</span> przekierowuje do strony projektu.
+            Przycisk <span className="italic mr-1">Zobacz więcej</span> przekierowuje do strony projektu. Zapraszam.
           </p>
         </header>
 
