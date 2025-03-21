@@ -152,7 +152,7 @@ export default function ContactWindow() {
                 <Phone className="h-5 w-5 text-gray-300" />
               </div>
               <div>
-                <p className="text-sm text-gray-400">Phone</p>
+                <p className="text-sm text-gray-400">Numer telefonu</p>
                 <Link href="tel:+48664982222" className="text-white hover:text-gray-300 transition-colors">
                   +48 664 982 222
                 </Link>
@@ -169,8 +169,8 @@ export default function ContactWindow() {
                 <MapPin className="h-5 w-5 text-gray-300" />
               </div>
               <div>
-                <p className="text-sm text-gray-400">Lokacja</p>
-                <p className="text-white">Olsztyn, Polska</p>
+                <p className="text-sm text-gray-400">Lokalizacje</p>
+                <p className="text-white">Olsztyn, Poznań, Warszawa</p>
               </div>
             </motion.div>
 
