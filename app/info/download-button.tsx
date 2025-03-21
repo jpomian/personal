@@ -119,14 +119,14 @@ export default function EmailDownloadModal() {
         <DialogTrigger asChild>
           <Button variant="default" className="dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
             <ArrowDownToLine />
-            Pobierz aktualne CV
+            Download latest CV
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-md dark:bg-slate-900 dark:text-white dark:border-slate-700">
           <DialogHeader>
-            <DialogTitle>{isSubmitted ? "Operacja powiodła się" : "Wprowadź adres e-mail"}</DialogTitle>
+            <DialogTitle>{isSubmitted ? "Success!" : "Attention! Information needed."}</DialogTitle>
             <DialogDescription className="dark:text-slate-400">
-              {isSubmitted ? "Pobieranie rozpocznie się za moment." : "Potwierdź swój adres e-mail i rozwiąż zadanie, aby zobaczyć plik."}
+              {isSubmitted ? "Download will start right away." : "Kindly input your email address and solve the equation to gain access to the CV."}
             </DialogDescription>
           </DialogHeader>
 
@@ -135,13 +135,13 @@ export default function EmailDownloadModal() {
               <div className="h-12 w-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
                 <Check className="h-6 w-6 text-green-600 dark:text-green-300" />
               </div>
-              <p className="text-center dark:text-slate-300">Dziękuję 🤝</p>
+              <p className="text-center dark:text-slate-300">Thank you 🤝</p>
               <Button
                 variant="outline"
                 onClick={handleReset}
                 className="mt-6 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
               >
-                Zamknij
+                Close
               </Button>
             </div>
           ) : (
@@ -153,7 +153,7 @@ export default function EmailDownloadModal() {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="twój@email.pl"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value)
@@ -164,19 +164,19 @@ export default function EmailDownloadModal() {
                   }`}
                 />
                 {!isValid && (
-                  <p className="text-sm text-red-500 dark:text-red-400">Wprowadź poprawny adres e-mail!</p>
+                  <p className="text-sm text-red-500 dark:text-red-400">Enter valid email!</p>
                 )}
               </div>
 
               <div className="space-y-2">
                 <Label htmlFor="mathAnswer" className="dark:text-slate-300">
-                  Rozwiąż: {num1} {operator} {num2} = ?
+                  Solve: {num1} {operator} {num2} = ?
                 </Label>
                 <Input
                   id="mathAnswer"
                   type="number"
                   step="1"
-                  placeholder="Twoja odpowiedź"
+                  placeholder="Final answer"
                   value={userAnswer}
                   onChange={(e) => {
                     setUserAnswer(e.target.value)
@@ -187,14 +187,14 @@ export default function EmailDownloadModal() {
                   }`}
                 />
                 {mathError && (
-                  <p className="text-sm text-red-500 dark:text-red-400">Niepoprawna odpowiedź!</p>
+                  <p className="text-sm text-red-500 dark:text-red-400">Incorrect answer. Try again!</p>
                 )}
               </div>
 
               <div className="flex justify-end">
                 <Button type="submit" className="dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
                   <Download className="mr-2 h-4 w-4" />
-                  Pobierz
+                  Download
                 </Button>
               </div>
             </form>

@@ -102,7 +102,7 @@ export default function ContactWindow() {
           >
             <Link href="/" className="inline-flex items-center text-gray-400 hover:text-white transition-colors group">
               <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-              <span>Powrót</span>
+              <span>Back</span>
             </Link>
           </motion.div>
           <div className="mb-6 text-center">
@@ -112,7 +112,7 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Hej!
+              Hello there!
             </motion.h1>
             <motion.p
               className="text-gray-400 mt-4"
@@ -120,7 +120,7 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Masz pytanie lub szukasz współpracy? Napisz do mnie.
+              Looking for collaboration? Have a question? Feel free to get in touch!
             </motion.p>
           </div>
 
@@ -152,7 +152,7 @@ export default function ContactWindow() {
                 <Phone className="h-5 w-5 text-gray-300" />
               </div>
               <div>
-                <p className="text-sm text-gray-400">Numer telefonu</p>
+                <p className="text-sm text-gray-400">Phone</p>
                 <Link href="tel:+48664982222" className="text-white hover:text-gray-300 transition-colors">
                   +48 664 982 222
                 </Link>
@@ -169,7 +169,7 @@ export default function ContactWindow() {
                 <MapPin className="h-5 w-5 text-gray-300" />
               </div>
               <div>
-                <p className="text-sm text-gray-400">Lokalizacje</p>
+                <p className="text-sm text-gray-400">Preferred locations (Poland)</p>
                 <p className="text-white">Olsztyn, Poznań, Warszawa</p>
               </div>
             </motion.div>

@@ -103,7 +103,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Designer. Deweloper. Architekt.
+          Designer. Developer. Architect.
         </motion.p>
 
         <div className="flex flex-row gap-12 mt-16">
@@ -117,7 +117,7 @@ export default function Hero() {
             <Link href={"/portfolio"}>
               <p className="flex flex-row items-center text-lg transition-all group-hover:text-white/60">
                 <Compass className="mr-3 w-6 h-6 group-hover:scale-105" />
-                Eksploruj moje prace
+                Explore my works
               </p>
             </Link>
           </motion.button>
@@ -132,7 +132,7 @@ export default function Hero() {
             <Link href={"/info"}>
               <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
                 <Phone className="mr-3 w-6 h-6 group-hover:scale-105" />
-                Skontaktuj się
+                Contact me
               </p>
             </Link>
           </motion.button>
