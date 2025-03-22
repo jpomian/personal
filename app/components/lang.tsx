@@ -1,14 +1,18 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 export default function LanguageSelector() {
   const pathname = usePathname();
   const currentHost = 
     typeof window !== "undefined" ? window.location.hostname : "";
 
-  // Debugging: Log the current hostname
-  console.log("Current Host:", currentHost);
+  // Debugging: Log after hydration
+  useEffect(() => {
+    console.log("Hydrated - Current Host:", currentHost);
+    console.log("Hydrated - isEnglish:", currentHost.startsWith("en."));
+  }, [currentHost]);
 
   // Create URLs with current path
   const enUrl = `https://en.jpomian.pl${pathname}`;
@@ -16,9 +20,6 @@ export default function LanguageSelector() {
 
   // Check current language
   const isEnglish = currentHost.startsWith("en.");
-
-  // Debugging: Log the isEnglish value
-  console.log("Is English:", isEnglish);
 
   return (
     <div className="absolute top-6 right-12 z-50">
