@@ -7,12 +7,18 @@ export default function LanguageSelector() {
   const currentHost = 
     typeof window !== "undefined" ? window.location.hostname : "";
 
+  // Debugging: Log the current hostname
+  console.log("Current Host:", currentHost);
+
   // Create URLs with current path
   const enUrl = `https://en.jpomian.pl${pathname}`;
   const plUrl = `https://jpomian.pl${pathname}`;
 
   // Check current language
   const isEnglish = currentHost.startsWith("en.");
+
+  // Debugging: Log the isEnglish value
+  console.log("Is English:", isEnglish);
 
   return (
     <div className="absolute top-6 right-12 z-50">

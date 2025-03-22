@@ -3,7 +3,7 @@ name: Deploy to Linode
 on:
   push:
     branches:
-      - main  # Change this to your desired branch
+      - english
 
 jobs:
   build-and-deploy:
@@ -25,8 +25,8 @@ jobs:
       # Build and push Docker images
       - name: Build and push NPP
         run: |
-          docker build -t ghcr.io/jpomian/personal:latest -f Dockerfile .
-          docker push ghcr.io/jpomian/personal:latest
+          docker build -t ghcr.io/jpomian/personal:english -f Dockerfile .
+          docker push ghcr.io/jpomian/personal:english
 
       # Deploy to Linode VPS
       - name: Deploy to Linode
