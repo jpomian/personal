@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import type React from "react";
 import { Metadata } from "next";
-import ClientWrapper from "./components/ClientWrapper";
+import LanguageSelector from "./components/lang";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`flex flex-col min-h-screen ${inter.className}`}>
-        <ClientWrapper key={new Date().getTime()} />
+        <LanguageSelector />
         {children}
       </body>
     </html>
