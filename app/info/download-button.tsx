@@ -15,6 +15,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 
+import { useRouter } from "next/navigation"
+
 export default function EmailDownloadModal() {
   const [email, setEmail] = useState("")
   const [isValid, setIsValid] = useState(true)
@@ -26,6 +28,8 @@ export default function EmailDownloadModal() {
   const [correctAnswer, setCorrectAnswer] = useState(0)
   const [userAnswer, setUserAnswer] = useState('')
   const [mathError, setMathError] = useState(false)
+
+  const router = useRouter()
 
   useEffect(() => {
     if (isOpen) {
@@ -65,19 +69,11 @@ export default function EmailDownloadModal() {
       const response = await fetch('/cv.pdf')
       if (!response.ok) throw new Error('File not found')
       
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      
-      const link = document.createElement('a')
-      link.href = url
-      link.download = 'cv.pdf'
-      document.body.appendChild(link)
-      link.click()
-      window.URL.revokeObjectURL(url)
-      document.body.removeChild(link)
+        router.push('/cv.pdf')
+
     } catch (error) {
       console.error('Download failed:', error)
-      alert('Download failed - please try again later')
+      alert('Pobieranie nie powiodło się. Wyślij do mnie mail na jpomianowski@outlook.com - aby otrzymać CV.')
     }
   }
 
