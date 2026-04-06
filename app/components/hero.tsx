@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { Compass, Phone } from 'lucide-react';
+import { BookOpenCheck, LandPlot } from 'lucide-react';
 import Link from 'next/link'
 
 export default function Hero() {
@@ -103,7 +103,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Designer. Deweloper. Architekt.
+          Tworzę projekty, które nie idą w próżnie.
         </motion.p>
 
         <div className="flex flex-row gap-12 mt-16">
@@ -116,8 +116,8 @@ export default function Hero() {
           >
             <Link href={"/portfolio"}>
               <p className="flex flex-row items-center text-lg transition-all group-hover:text-white/60">
-                <Compass className="mr-3 w-6 h-6 group-hover:scale-105" />
-                Eksploruj moje prace
+                <BookOpenCheck className="mr-3 w-6 h-6 group-hover:scale-105" />
+                Moje projekty
               </p>
             </Link>
           </motion.button>
@@ -131,8 +131,8 @@ export default function Hero() {
           >
             <Link href={"/info"}>
               <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
-                <Phone className="mr-3 w-6 h-6 group-hover:scale-105" />
-                Skontaktuj się
+                <LandPlot className="mr-3 w-6 h-6 group-hover:scale-105" />
+                Więcej o mnie
               </p>
             </Link>
           </motion.button>

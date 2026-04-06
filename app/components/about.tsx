@@ -9,9 +9,9 @@ import { Mail, Phone, MapPin, ArrowLeft } from "lucide-react";
 import GitHub from "../../assets/github.png";
 import Linkedin from "../../assets/linkedin-icon.svg";
 
-import EmailDownloadModal from "../components/download-button";
+import EmailDownloadModal from "./download-button";
 
-export default function ContactWindow() {
+export default function About() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -90,12 +90,12 @@ export default function ContactWindow() {
   }, []);
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
+    <div className="relative h-screen">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 h-full w-full bg-black"
       />
-      <div className="relative z-10 flex h-full w-full items-center justify-center px-4 py-16">
+      <div className="relative z-10 flex w-full items-center justify-center px-4 py-16">
         <motion.div
           className="w-full max-w-[1164px] rounded-lg border border-gray-800 bg-black/80 backdrop-blur-sm p-12"
           initial={{ opacity: 0, y: 20 }}
@@ -139,8 +139,9 @@ export default function ContactWindow() {
           </motion.div>
 
           {/* Section 1 */}
+          <div className="mb-10">
             <motion.h2
-              className="mb-4 text-4xl font-bold tracking-tight text-white text-center"
+              className="mb-4 text-4xl font-bold tracking-tight text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -174,15 +175,16 @@ export default function ContactWindow() {
             >
               Moją specjalizacją są technologie rozproszone, w szczególności technologia <strong>blockchain</strong>. 
               Brałem udział w hackatonach, gdzie projektowałem aplikacje tworząc realne przypadki użycia. 
-              Więcej o tym możesz znaleźć w moim <Link href="/portfolio" className="underline decoration-dashed text-gray-100 hover:text-lg hover:opacity-70 hover:no-underline transition duration-300">portfolio</Link>.  
+              Więcej o tym możesz znaleźć w moim <Link href="/portfolio" className="underline decoration-dashed text-gray-100 hover:opacity-70 transition duration-300">portfolio</Link>.  
             </motion.p>
+          </div>
 
           <div className="border-t border-gray-800 my-8" />
 
           {/* Section 2 */}
           <div>
             <motion.h3
-              className="mb-4 text-2xl font-semibold tracking-tight text-white text-center"
+              className="mb-4 text-2xl font-semibold tracking-tight text-white"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -196,8 +198,7 @@ export default function ContactWindow() {
               transition={{ duration: 0.5, delay: 0.5 }}
             >
             Tworzenie stron internetowych to tylko jedna z moich domen. Dodatkowo zajmuję się także ich hostowaniem oraz utrzymaniem. 
-            Opanowane techniki <strong>DevOps</strong>, pozwalają mi na wydajny przepływ pracy na obrazach Docker wewnątrz mojego serwera VPS.
-            Wszystko w celu uproszczenia procesu dowożenia zmian do moich projektów. 
+            Opanowane sztuczki <strong>DevOps</strong>, pozwalają mi na wydajny przepływ pracy na obrazach Docker wewnątrz mojego serwera VPS, celem prostej aktualizacji wszystkich moich projektów. 
 
             </motion.p>
 

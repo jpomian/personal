@@ -117,16 +117,16 @@ export default function EmailDownloadModal() {
     <div className="flex items-center justify-center">
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogTrigger asChild>
-          <Button variant="default" className="dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+          <Button variant="default" className="dark:bg-slate-800 dark:text-white dark:hover:bg-slate-400">
             <ArrowDownToLine />
-            Pobierz aktualne CV
+            Pobierz CV
           </Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-md dark:bg-slate-900 dark:text-white dark:border-slate-700">
           <DialogHeader>
-            <DialogTitle>{isSubmitted ? "Operacja powiodła się" : "Wprowadź adres e-mail"}</DialogTitle>
+            <DialogTitle>{isSubmitted ? "Operacja powiodła się" : "Captcha"}</DialogTitle>
             <DialogDescription className="dark:text-slate-400">
-              {isSubmitted ? "Pobieranie rozpocznie się za moment." : "Potwierdź swój adres e-mail i rozwiąż zadanie, aby zobaczyć plik."}
+              {isSubmitted ? "Pobieranie rozpocznie się za moment." : "Wprowadź swój adres e-mail i rozwiąż zadanie, aby zobaczyć plik."}
             </DialogDescription>
           </DialogHeader>
 

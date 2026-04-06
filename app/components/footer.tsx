@@ -8,8 +8,8 @@ export default function Footer() {
             <a href="https://github.com/jpomian" className="text-gray-400 hover:text-white">
               Github
             </a>
-            <a href="https://etherscan.io/address/0x0E522E6ad7Ad2C2515a3bb914e66C350537d9D7a" className="text-gray-400 hover:text-white">
-              Etherscan
+            <a href="https://steamcommunity.com/id/mixtaz" className="text-gray-400 hover:text-white">
+              Steam
             </a>
             <a href="https://www.linkedin.com/in/jpomian/" className="text-gray-400 hover:text-white">
               LinkedIn
