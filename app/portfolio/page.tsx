@@ -25,16 +25,16 @@ export default function Portfolio() {
         </Link>
 
         <header className="flex flex-col items-center justify-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-400 to-purple-300 text-transparent bg-clip-text">
             Portfolio
           </h1>
           <p className="text-gray-400 text-center text-lg max-w-2xl">
-            Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (Web 3), oraz aplikacje tradycyjne bez
-            integracji z blockchainem (Web 2).
+            Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (<span className="font-semibold">Web 3</span>), oraz aplikacje tradycyjne bez
+            integracji z łańcuchem bloków (<span className="font-semibold">Web 2</span>).
           </p>
 
           <p className="text-gray-400/60 text-center text-md max-w-2xl mt-6">
-            Przycisk <span className="italic mr-1">Zobacz więcej</span> przekierowuje do strony projektu. Zapraszam.
+            Przycisk <span className="italic mr-1">Zobacz więcej</span> przekierowuje do strony projektu.
           </p>
         </header>
 

@@ -44,7 +44,7 @@ export function ProjectCard({ project }: { project: Project }) {
                 className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
                 absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center"
               >
-                Czas wykonania <br /> projektu
+                Czas wykonania
               </span>
             </div>
           </div>

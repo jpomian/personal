@@ -1,13 +1,25 @@
 import type { Project } from "../types/project"
 import nieruchomosci from "@/assets/thumbnails/nieruchomsci.png"
-import gogworld from "@/assets/thumbnails/gogworld.png"
+import gogdex from "@/assets/thumbnails/gogdex-full.png"
 import veriflex from "@/assets/thumbnails/veriflex.png"
-import biohazard from "@/assets/thumbnails/biohazard.png"
+import biohazard from "@/assets/thumbnails/biohazard-old.png"
 import forge from "@/assets/thumbnails/2forge.png"
 
 export const projects: Project[] = [
   {
     id: 1,
+    name: "GoG Dex",
+    description:
+      "Fanowska strona przygotowana dla społeczności w grze Guild of Guardians. Użytkownik może w niej zapoznać się z historycznym rankingiem graczy, sprawdzić atlas bohaterów z gry lub zasymulować rozwój poszczególnych części ekwipunku.",
+    image: gogdex,
+    releaseDate: "Wrzesień 2025",
+    estimatedTime: "12 tygodni",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Python", "Immutable zkEVM"],
+    url: "https://gogdex.com",
+    category: "blockchain",
+  },
+  {
+    id: 2,
     name: "Nieruchomości pod parasolem",
     description:
       "Strona internetowa firmy Nieruchomości pod parasolem. Zawiera najważniejsze informacje firmy wraz z FAQ, cennikiem oraz dynamicznym interfejsem z ofertami nieruchomości.",
@@ -19,18 +31,6 @@ export const projects: Project[] = [
     category: "trad",
   },
   {
-    id: 2,
-    name: "GoG World",
-    description:
-      "Katalog wszystkich tokenów NFT z kolekcji Guild of Guardians Avatars. Pełna kolekcja wszystkich 10.000 cyfrowych tokenów wraz z ich metadanymi i rankingiem w oparciu o ich rzadkość.",
-    image: gogworld,
-    releaseDate: "Grudzień 2024",
-    estimatedTime: "6 tygodni",
-    tags: ["React", "TypeScript", "NextJS", "Tailwind CSS", "Immutable SDK"],
-    url: "https://gogworld.vercel.app",
-    category: "blockchain",
-  },
-  {
     id: 3,
     name: "VeriFlex",
     description:
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     image: veriflex,
     releaseDate: "Czerwiec 2024",
     estimatedTime: "3 tygodnie",
-    tags: ["React", "TypeScript", "Chakra UI", "RainbowKit", "Hardhat", "Circom"],
+    tags: ["React", "TypeScript", "Chakra UI", "RainbowKit", "Hardhat", "Circom", "Arbitrum"],
     url: "https://veriflex.vercel.app",
     category: "blockchain",
   },
@@ -62,7 +62,7 @@ export const projects: Project[] = [
     image: forge,
     releaseDate: "Czerwiec 2023",
     estimatedTime: "8 tygodni",
-    tags: ["React", "NextJS", "TypeScript", "Hardhat", "Solidity"],
+    tags: ["React", "NextJS", "TypeScript", "Hardhat", "Solidity", "Arbitrum"],
     url: "https://2forge.vercel.app",
     category: "blockchain",
   },
