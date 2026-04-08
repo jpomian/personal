@@ -1,13 +1,38 @@
 import type { Project } from "../types/project"
 import nieruchomosci from "@/assets/thumbnails/nieruchomsci.png"
-import gogworld from "@/assets/thumbnails/gogworld.png"
+import gogdex from "@/assets/thumbnails/gogdex-full.png"
+import runics from "@/assets/thumbnails/runics.png"
 import veriflex from "@/assets/thumbnails/veriflex.png"
-import biohazard from "@/assets/thumbnails/biohazard.png"
+import biohazard from "@/assets/thumbnails/biohazard-old.png"
 import forge from "@/assets/thumbnails/2forge.png"
 
 export const projects: Project[] = [
   {
     id: 1,
+    name: "GoG Dex",
+    description:
+      "A fan-made website created for the Guild of Guardians community. Users can view historical player rankings, check the game's hero atlas, or simulate the progression of specific pieces of equipment.",
+    image: gogdex,
+    releaseDate: "Wrzesień 2025",
+    estimatedTime: "12 tygodni",
+    tags: ["React", "TypeScript", "Tailwind CSS", "Python", "Immutable zkEVM"],
+    url: "https://gogdex.com",
+    category: "blockchain",
+  },
+  {
+    id: 2,
+    name: "Runics",
+    description:
+      "A runic dictionary that maps numbers in the range [0-9999] to their runic representation as vector graphics. The mechanism is described in the reference table in the upper right corner.",
+    image: runics,
+    releaseDate: "Kwiecień 2025",
+    estimatedTime: "Tydzień",
+    tags: ["React", "TypeScript", "NextJS", "SVG"],
+    url: "https://runics.vercel.app",
+    category: "trad",
+  },
+  {
+    id: 3,
     name: "Nieruchomości pod parasolem",
     description:
       "Landing page for company Nieruchomości pod parasolem. Includes the company's most important information along with FAQs, price list and dynamic interface with real estate listings.",
@@ -19,19 +44,7 @@ export const projects: Project[] = [
     category: "trad",
   },
   {
-    id: 2,
-    name: "GoG World",
-    description:
-      "A catalog of all NFT tokens from the Guild of Guardians Avatars collection. A complete collection of all 10,000 digital tokens along with their metadata and ranking based on their rarity.",
-    image: gogworld,
-    releaseDate: "December 2024",
-    estimatedTime: "6 weeks",
-    tags: ["React", "TypeScript", "NextJS", "Tailwind CSS", "Immutable SDK"],
-    url: "https://gogworld.vercel.app",
-    category: "blockchain",
-  },
-  {
-    id: 3,
+    id: 4,
     name: "VeriFlex",
     description:
       "The winning application made as part of the Franklin Templeton Blockchain Contest. Once the wallet is connected, the app can generate soul-bound token (SBT) for its user.",
@@ -43,7 +56,7 @@ export const projects: Project[] = [
     category: "blockchain",
   },
   {
-    id: 4,
+    id: 5,
     name: "Portal Biohazard",
     description:
       "A site designed for players in the game Counter Strike 1.6. The site contains key information such as rules and regulations, the pool of maps played and live player statistics.",
@@ -55,10 +68,10 @@ export const projects: Project[] = [
     category: "trad",
   },
   {
-    id: 5,
+    id: 6,
     name: "2Forge",
     description:
-      "A platform for exchanging physical collectible goods. Every product sold on the 2Forge platform receives an e-paragon stored inside the blockchain.",
+      "A platform for exchanging physical collectible goods. Every product sold on the 2Forge platform receives an e-receipt stored inside the blockchain.",
     image: forge,
     releaseDate: "June 2023",
     estimatedTime: "8 weeks",

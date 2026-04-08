@@ -25,7 +25,7 @@ export default function Portfolio() {
         </Link>
 
         <header className="flex flex-col items-center justify-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-400 to-purple-300 text-transparent bg-clip-text">
             Portfolio
           </h1>
           <p className="text-gray-400 text-center text-lg max-w-2xl">
