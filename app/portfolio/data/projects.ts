@@ -1,6 +1,7 @@
 import type { Project } from "../types/project"
 import nieruchomosci from "@/assets/thumbnails/nieruchomsci.png"
 import gogdex from "@/assets/thumbnails/gogdex-full.png"
+import runics from "@/assets/thumbnails/runics.png"
 import veriflex from "@/assets/thumbnails/veriflex.png"
 import biohazard from "@/assets/thumbnails/biohazard-old.png"
 import forge from "@/assets/thumbnails/2forge.png"
@@ -20,6 +21,18 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    name: "Runics",
+    description:
+      "Słownik runiczny interpretujący liczby z zakresu [0-9999] na ich runiczną reprezentację w postaci grafik wektorowych. Mechanizm działania jest dostępny w tabelce referencyjnej w prawym górnym rogu.",
+    image: runics,
+    releaseDate: "Kwiecień 2025",
+    estimatedTime: "Tydzień",
+    tags: ["React", "TypeScript", "NextJS", "SVG"],
+    url: "https://runics.vercel.app",
+    category: "trad",
+  },
+  {
+    id: 3,
     name: "Nieruchomości pod parasolem",
     description:
       "Strona internetowa firmy Nieruchomości pod parasolem. Zawiera najważniejsze informacje firmy wraz z FAQ, cennikiem oraz dynamicznym interfejsem z ofertami nieruchomości.",
@@ -31,7 +44,7 @@ export const projects: Project[] = [
     category: "trad",
   },
   {
-    id: 3,
+    id: 4,
     name: "VeriFlex",
     description:
       "Zwycięska aplikacja wykonana w ramach Franklin Templeton Blockchain Contest. Po podłączeniu portfela, aplikacja oferuje generacje tokenów przywiązanych do duszy (SBT).",
@@ -43,7 +56,7 @@ export const projects: Project[] = [
     category: "blockchain",
   },
   {
-    id: 4,
+    id: 5,
     name: "Portal Biohazard",
     description:
       "Strona przeznaczona dla graczy serwera w grze Counter Strike 1.6. Strona zawiera kluczowe informacje takie jak regulamin, pula rozgrywanych map czy statystyki graczy na żywo.",
@@ -55,7 +68,7 @@ export const projects: Project[] = [
     category: "trad",
   },
   {
-    id: 5,
+    id: 6,
     name: "2Forge",
     description:
       "Platforma wymiany fizycznych dóbr kolekcjonerskich. Każdy produkt sprzedany na platformie 2Forge otrzymuje e-paragon zapisany wewnątrz łańcucha bloków.",

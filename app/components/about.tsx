@@ -155,7 +155,7 @@ export default function About() {
               transition={{ duration: 0.5, delay: 0.3 }}
             >
               Moje imię już znasz, dowiesz się teraz trochę o mojej osobie. 
-              Jestem dojrzewającym <strong>webmasterem</strong>, praktycznym <strong>matematykiem</strong>, amatorskim <strong>grafikiem</strong> oraz <strong>inwestorem</strong> aktywów nowoczesnych.
+              Jestem uważnym <strong>webmasterem</strong>, praktykującym <strong>matematykiem</strong>, amatorskim <strong>grafikiem</strong> oraz <strong>inwestorem</strong> aktywów nowoczesnych.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-base"
