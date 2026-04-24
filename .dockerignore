@@ -1,11 +1,7 @@
 # .dockerignore
 .git
 .next/cache
-node_modules
 src
-app
-components
-lib
 *.md
 .env*
 *.log
