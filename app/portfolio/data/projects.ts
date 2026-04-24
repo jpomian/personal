@@ -35,7 +35,7 @@ export const projects: Project[] = [
     id: 3,
     name: "Nieruchomości pod parasolem",
     description:
-      "Landing page for company Nieruchomości pod parasolem. Includes the company's most important information along with FAQs, price list and dynamic interface with real estate listings.",
+      "Landing page for an excellent housing agent. FAQs, price list and dynamic interface with real estate listings online. Contact forms for interested clients saved in DB.",
     image: nieruchomosci,
     releaseDate: "February 2025",
     estimatedTime: "4 weeks",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: 5,
     name: "Portal Biohazard",
     description:
-      "A site designed for players in the game Counter Strike 1.6. The site contains key information such as rules and regulations, the pool of maps played and live player statistics.",
+      "A site designed for dedicated players in game Counter Strike 1.6 Zombies. The site contains key information such as rules, pool of maps played morning/evening and live player statistics.",
     image: biohazard,
     releaseDate: "November 2023",
     estimatedTime: "2 weeks",

@@ -209,7 +209,7 @@ export default function ContactWindow() {
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
                 I am currently in the process of writing a scientific article in collaboration with the <strong>Poznań University of Economics</strong>.
-                The publication will be an extension of the research I conducted in my master's thesis.
+                The publication will be an extension of the research I conducted in my master thesis.
               </motion.p>
 
               <motion.p
@@ -218,7 +218,7 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <strong>Hackathons</strong>. I have more ideas that I would like to pour out into a mockup. If you are looking for a team member and you know a competition is taking place, <strong>reach out</strong>!
+                <strong>Hackathons</strong>. I have more ideas that I would like to pour out into a mockup. If you are looking for a team member and you know a competition is taking place, <strong>reach out</strong> to me.
               </motion.p>
             </div>
 
