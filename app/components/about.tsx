@@ -54,7 +54,7 @@ export default function About() {
 
       draw() {
         if (!ctx) return;
-        ctx.fillStyle = "rgba(255, 255, 255, 0.6)";
+        ctx.fillStyle = "rgba(222, 151, 0, 0.6)";
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();

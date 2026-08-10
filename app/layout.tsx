@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
-import { Inter } from "next/font/google";
+import { Chakra_Petch } from "next/font/google";
 import type React from "react";
 import { Metadata } from "next";
 import LanguageSelector from "./components/lang";
 
-const inter = Inter({ subsets: ["latin"] });
+const quanti = Chakra_Petch({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "[jpomian]",
@@ -18,7 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`flex flex-col min-h-screen ${inter.className}`}>
+      <script defer src="https://stats.jpomian.pl/script.js" data-website-id="e7e81d85-60d9-4fd4-807e-3808a5938743"></script>
+      <body className={`flex flex-col min-h-screen ${quanti.className}`}>
         <LanguageSelector />
         {children}
       </body>

@@ -19,7 +19,7 @@ export default function Hero() {
     canvas.height = window.innerHeight
 
     const particles: Particle[] = []
-    const particleCount = 120
+    const particleCount = 140
 
     class Particle {
       x: number
@@ -31,9 +31,9 @@ export default function Hero() {
       constructor() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
-        this.size = Math.random() * 2 + 0.1
-        this.speedX = Math.random() * 2 - 1
-        this.speedY = Math.random() * 2 - 1
+        this.size = Math.random() * 2 + 1
+        this.speedX = Math.random() * 2 - 3
+        this.speedY = Math.random() * 2 - 2
       }
 
       update() {
@@ -48,7 +48,7 @@ export default function Hero() {
 
       draw() {
         if (!ctx) return
-        ctx.fillStyle = "rgba(255, 255, 255, 0.6)"
+        ctx.fillStyle = "rgba(222, 151, 0, 0.6)"
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         ctx.fill()
@@ -95,7 +95,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          JĘDRZEJ POMIANOWSKI
+          JĘDRZEJ <span className="text-amber-500">POMIANOWSKI</span>
         </motion.h1>
         <motion.p
           className="max-w-[600px] text-lg text-gray-400 sm:text-xl"
@@ -103,10 +103,10 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Tworzę projekty, które nie idą w próżnie.
+          Nieszablonowe pomysły na stronę internetową
         </motion.p>
 
-        <div className="flex flex-row gap-12 mt-16">
+        <div className="flex flex-row gap-12 mt-12">
 
           <motion.button
             className="px-6 py-3 border border-gray-200/80 rounded-lg group"
@@ -116,7 +116,7 @@ export default function Hero() {
           >
             <Link href={"/portfolio"}>
               <p className="flex flex-row items-center text-lg transition-all group-hover:text-white/60">
-                <BookOpenCheck className="mr-3 w-6 h-6 group-hover:scale-105" />
+                <BookOpenCheck className="mr-3 w-6 h-6 group-hover:scale-110" />
                 Moje projekty
               </p>
             </Link>
