@@ -197,8 +197,9 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-            Tworzenie stron internetowych to tylko jedna z moich domen. Dodatkowo zajmuję się także ich hostowaniem oraz utrzymaniem. 
-            Opanowane sztuczki <strong>DevOps</strong>, pozwalają mi na wydajny przepływ pracy na obrazach Docker wewnątrz mojego serwera VPS, celem prostej aktualizacji wszystkich moich projektów. 
+            Tworzenie stron internetowych to tylko jedna ze stron webmasteringu. Dodatkowo zajmuję się hostowaniem, utrzymaniem oraz rozwojem każdej ze stron. 
+            Moje wcześniejsze doświadczenia w tworzeniu i administracji baz danych w trakcie lat licealnych, pomogły mi w czystym utrzymaniu danych.
+            Techniki <strong>DevOps</strong> zastosowane w ramach ekosystemu, wygładzają obsługę wszystkich aplikacji wewnątrz mojego serwera VPS. 
 
             </motion.p>
 

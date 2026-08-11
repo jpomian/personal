@@ -32,8 +32,8 @@ export default function Hero() {
         this.x = Math.random() * canvas.width
         this.y = Math.random() * canvas.height
         this.size = Math.random() * 2 + 1
-        this.speedX = Math.random() * 2 - 3
-        this.speedY = Math.random() * 2 - 2
+        this.speedX = Math.random() * 2 - 4
+        this.speedY = Math.random() * 2 - 3
       }
 
       update() {

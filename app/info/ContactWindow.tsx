@@ -4,6 +4,13 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
+import {
+  Tooltip,
+  TooltipTrigger,
+  TooltipContent,
+  TooltipProvider,
+} from "../../components/ui/tooltip";
+import { Button } from "@/components/ui/button";
 
 import { Mail, Phone, MapPin, ArrowLeft } from "lucide-react";
 import GitHub from "../../assets/github.png";
@@ -90,12 +97,12 @@ export default function ContactWindow() {
   }, []);
 
   return (
-    <div className="relative w-full">
+    <div className="relative h-screen w-full">
       <canvas
         ref={canvasRef}
         className="fixed inset-0 h-full w-full bg-black"
       />
-      
+
       <div className="relative z-10 flex min-h-screen w-full items-center justify-center px-4 py-8 md:py-16">
         <div className="w-full max-w-[1164px] my-auto">
           <motion.div
@@ -155,8 +162,11 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moje imię już znasz, dowiesz się teraz trochę o mojej osobie. 
-              Jestem dojrzewającym <strong>webmasterem</strong>, praktycznym <strong>matematykiem</strong>, amatorskim <strong>grafikiem</strong> oraz <strong>inwestorem</strong> aktywów nowoczesnych.
+              Moje imię już znasz, dowiesz się teraz trochę o mojej osobie.
+              Jestem dojrzewającym <strong>webmasterem</strong>, praktycznym{" "}
+              <strong>matematykiem</strong>, amatorskim{" "}
+              <strong>grafikiem</strong> oraz <strong>inwestorem</strong>{" "}
+              aktywów nowoczesnych.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base"
@@ -164,9 +174,13 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Urodzony w Olsztynie, szukam wyzwań i nowych doświadczeń w dużych miastach w Polsce i za granicą. Jestem zainteresowany długoterminowym 
-              <strong> upskillingiem</strong> i <strong>reskillingiem</strong> swoich umiejętności.
-              Wierzę, że wiedza i zdolności, które zdobyłem na swojej ścieżce prywatnej i zawodowej to <strong>kapitał</strong>, który nie może zostać mi odebrany. 
+              Urodzony w Olsztynie, szukam wyzwań i nowych doświadczeń w dużych
+              miastach w Polsce i za granicą. Jestem zainteresowany
+              długoterminowym
+              <strong> upskillingiem</strong> i <strong>reskillingiem</strong>{" "}
+              swoich umiejętności. Wierzę, że wiedza i zdolności, które zdobyłem
+              na swojej ścieżce prywatnej i zawodowej to{" "}
+              <strong>kapitał</strong>, który nie może zostać mi odebrany.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base"
@@ -174,9 +188,17 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moją specjalizacją są technologie rozproszone, w szczególności technologia <strong>blockchain</strong>. 
-              Brałem udział w hackatonach, gdzie projektowałem aplikacje tworząc realne przypadki użycia. 
-              Więcej o tym możesz znaleźć w moim <Link href="/portfolio" className="underline decoration-dashed text-gray-100 hover:text-lg hover:opacity-70 hover:no-underline transition duration-300">portfolio</Link>.  
+              Moją specjalizacją są technologie rozproszone, w szczególności
+              technologia <strong>blockchain</strong>. Brałem udział w
+              hackatonach, gdzie projektowałem aplikacje tworząc realne
+              przypadki użycia. Więcej o tym możesz znaleźć w moim{" "}
+              <Link
+                href="/portfolio"
+                className="underline decoration-dashed text-gray-100 hover:text-lg hover:opacity-70 hover:no-underline transition duration-300"
+              >
+                portfolio
+              </Link>
+              .
             </motion.p>
 
             <div className="border-t border-gray-500 my-6 md:my-8" />
@@ -197,9 +219,14 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Tworzenie stron internetowych to tylko jedna z moich domen. Dodatkowo zajmuję się także ich hostowaniem oraz utrzymaniem. 
-                Opanowane techniki <strong>DevOps</strong>, pozwalają mi na wydajny przepływ pracy na obrazach Docker wewnątrz mojego <strong>serwera VPS</strong>.
-                Wszystko w celu uproszczenia procesu publikacji zmian w moich projektach. 
+                Tworzenie stron internetowych to tylko jedna ze stron
+                webmasteringu. Dodatkowo zajmuję się hostowaniem, utrzymaniem
+                oraz rozwojem każdej ze stron. Moje wcześniejsze doświadczenia w
+                tworzeniu i administracji baz danych w trakcie lat licealnych,
+                pomogły mi w czystym utrzymaniu danych. Techniki{" "}
+                <strong>DevOps</strong> zastosowane w ramach ekosystemu,
+                wygładzają obsługę wszystkich aplikacji wewnątrz mojego serwera
+                VPS.
               </motion.p>
 
               <motion.p
@@ -208,8 +235,10 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Jestem w trakcie tworzenia artykułu naukowego we współpracy z <strong>Uniwersytetem Ekonomicznym w Poznaniu</strong>.
-                Publikacja będzie stanowiła rozszerzenie moich badań zawartych w pracy magisterskiej. 
+                Jestem w trakcie tworzenia artykułu naukowego we współpracy z{" "}
+                <strong>Uniwersytetem Ekonomicznym w Poznaniu</strong>.
+                Publikacja będzie stanowiła rozszerzenie moich badań zawartych w
+                pracy magisterskiej.
               </motion.p>
 
               <motion.p
@@ -218,7 +247,9 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <strong>Hackatony</strong>. Mam więcej pomysłów które chciałbym wylać na makietę. Jeżeli szukasz osoby do zespołu, a wiesz że odbywa się taki konkurs, <strong>napisz</strong>!
+                <strong>Hackatony</strong>. Mam więcej pomysłów które chciałbym
+                wylać na makietę. Jeżeli szukasz osoby do zespołu, a wiesz że
+                odbywa się taki konkurs, <strong>napisz</strong>!
               </motion.p>
             </div>
 
@@ -239,9 +270,18 @@ export default function ContactWindow() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.6 }}
               >
-                <div className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800">
-                  <Mail className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
-                </div>
+                <TooltipProvider delayDuration={0}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer">
+                        <Mail className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      <p>Adres e-mail</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 <Link
                   href="mailto:jpomianowski@outlook.com"
                   className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors break-all"
@@ -256,14 +296,23 @@ export default function ContactWindow() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.7 }}
               >
-                <div className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800">
-                  <Phone className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
-                </div>
+                <TooltipProvider delayDuration={0}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer">
+                        <Phone className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      <p>Telefon komórkowy</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
                 <Link
                   href="tel:+48664982222"
                   className="text-xs sm:text-sm text-gray-400 hover:text-white transition-colors"
                 >
-                  +48 664 982 222
+                  664 982 222
                 </Link>
               </motion.div>
 
@@ -273,10 +322,21 @@ export default function ContactWindow() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
               >
-                <div className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800">
-                  <MapPin className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
-                </div>
-                <p className="text-xs sm:text-sm text-gray-400 text-wrap">[Olsztyn, Poznań, Warszawa, Rzeszów, Wrocław]</p>
+                <TooltipProvider delayDuration={0}>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <button className="flex h-8 w-8 md:h-9 md:w-9 items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer">
+                        <MapPin className="h-3 w-3 md:h-4 md:w-4 text-gray-300" />
+                      </button>
+                    </TooltipTrigger>
+                    <TooltipContent side="top">
+                      <p>Chętnie pracuję tu</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+                <p className="text-xs sm:text-sm text-gray-400 text-wrap hover:text-white transition-colors">
+                  [Olsztyn, Poznań, Warszawa, Rzeszów, Wrocław]
+                </p>
               </motion.div>
             </div>
           </motion.div>
