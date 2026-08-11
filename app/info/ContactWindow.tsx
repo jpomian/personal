@@ -10,7 +10,6 @@ import {
   TooltipContent,
   TooltipProvider,
 } from "../../components/ui/tooltip";
-import { Button } from "@/components/ui/button";
 
 import { Mail, Phone, MapPin, ArrowLeft } from "lucide-react";
 import GitHub from "../../assets/github.png";
