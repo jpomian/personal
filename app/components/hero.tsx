@@ -53,7 +53,7 @@ export default function Hero() {
       }
     }
 
-    let particles: Particle[] = Array.from(
+    const particles: Particle[] = Array.from(
       { length: popsRef.current },
       () => new Particle()
     );
