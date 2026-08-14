@@ -341,6 +341,17 @@ export default function ContactWindow() {
           </motion.div>
         </div>
       </div>
+  
+    <div className="fixed bottom-[10px] right-5 z-10">
+        <div className="mx-auto px-4">
+          <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
+            <p className="text-sm text-gray-400">
+              © {new Date().getFullYear()} Jędrzej Pomianowski.
+            </p>
+          </div>
+        </div>
+      </div>
+          
     </div>
   );
 }
