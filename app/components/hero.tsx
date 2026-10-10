@@ -46,7 +46,7 @@ export default function Hero() {
       }
 
       draw() {
-        ctx!.fillStyle = "rgba(222, 151, 0, 0.6)";
+        ctx!.fillStyle = "rgba(153, 204, 255, 0.6)";
         ctx!.beginPath();
         ctx!.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx!.fill();
@@ -104,7 +104,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          JĘDRZEJ <span className="text-amber-500">POMIANOWSKI</span>
+          JĘDRZEJ <span className="text-[#3388FF]">POMIANOWSKI</span>
         </motion.h1>
         <motion.p
           className="max-w-[600px] text-lg text-gray-400 sm:text-xl"
