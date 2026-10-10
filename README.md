@@ -1,12 +1,11 @@
-# Moja strona wizytówka
+# My personal website
 
-Cześć! Zapraszam do zapoznania się z [moją stroną internetową](https://jpomian.pl). Dostępna jest także wersja w [języku angielskim](https://en.jpomian.pl).
+Hi! Welcome to my [website](https://en.jpomian.pl). A [Polish version](https://jpomian.pl) is also available.
 
-# Treści
+# Content
 
-## O mnie
-Na stronie dowiesz się więcej na mój temat. Kim jestem, czym się zajmuje i co robię na dany moment. Przeczytaj i skontaktuj się ze mną jeżeli działasz we wspólnym obszarze.
+## About me
+On the site you can learn more about me — who I am, what I do, and what I'm working on at the moment. Read on and get in touch if we work in the same area.
 
-
-## Projekty
-Tutaj chwalę się swoimi zakończonymi projektami. Dzielą sie one na te oparte o [sieć 2.0](https://pl.wikipedia.org/wiki/Web_2.0) czyli strony o tradycyjnym charakterze. Drugą część stanowią projekty oparte o [sieć 3.0](https://en.wikipedia.org/wiki/Web3).
+## Projects
+Here I showcase my finished projects. They are divided into those built on [web 2.0](https://en.wikipedia.org/wiki/Web_2.0) — websites of a traditional nature — and projects built on [web 3.0](https://en.wikipedia.org/wiki/Web3).

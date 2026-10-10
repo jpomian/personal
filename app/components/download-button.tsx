@@ -22,16 +22,16 @@ import { useRouter } from "next/navigation";
 /* -------------------------------------------------------------------------- */
 
 const FRUITS = [
-  { emoji: "🍎", name: "jabłko" },
-  { emoji: "🍌", name: "banan" },
-  { emoji: "🍇", name: "winogrona" },
-  { emoji: "🍓", name: "truskawka" },
-  { emoji: "🍊", name: "pomarańcza" },
-  { emoji: "🍐", name: "gruszka" },
-  { emoji: "🍉", name: "arbuz" },
-  { emoji: "🍍", name: "ananas" },
+  { emoji: "🍎", name: "apple" },
+  { emoji: "🍌", name: "banana" },
+  { emoji: "🍇", name: "grapes" },
+  { emoji: "🍓", name: "strawberry" },
+  { emoji: "🍊", name: "orange" },
+  { emoji: "🍐", name: "pear" },
+  { emoji: "🍉", name: "watermelon" },
+  { emoji: "🍍", name: "pineapple" },
   { emoji: "🥝", name: "kiwi" },
-  { emoji: "🍒", name: "wiśnie" },
+  { emoji: "🍒", name: "cherries" },
 ] as const;
 
 type Fruit = (typeof FRUITS)[number];
@@ -141,7 +141,7 @@ export default function EmailDownloadModal() {
     } catch (error) {
       console.error("Download failed:", error);
       alert(
-        "Pobieranie nie powiodło się. Wyślij do mnie mail na jpomianowski@outlook.com - aby otrzymać CV.",
+        "The download failed. Send me an email at jpomianowski@outlook.com to receive the CV.",
       );
     }
   };
@@ -192,19 +192,19 @@ export default function EmailDownloadModal() {
             <span className="absolute inset-0 rounded-md border-2 border-transparent group-hover:border-white/30 transition-all duration-300 pointer-events-none" />
             <span className="absolute inset-[3px] rounded-[4px] border-2 border-transparent group-hover:border-amber-200/30 transition-all duration-300 pointer-events-none" />
             <ArrowDownToLine className="mr-2 h-4 w-4" />
-            Pobierz CV
+            Download CV
           </Button>
         </DialogTrigger>
 
         <DialogContent className="sm:max-w-md dark:bg-slate-900 dark:text-white dark:border-slate-700">
           <DialogHeader>
             <DialogTitle>
-              {isSubmitted ? "Operacja powiodła się" : "Captcha"}
+              {isSubmitted ? "Success" : "Captcha"}
             </DialogTitle>
             <DialogDescription className="dark:text-slate-400">
               {isSubmitted
-                ? "Pobieranie rozpocznie się za moment."
-                : "Podaj adres e-mail i dokończ sekwencję, aby pobrać dokument."}
+                ? "Your download will start in a moment."
+                : "Enter your email address and complete the sequence to download the document."}
             </DialogDescription>
           </DialogHeader>
 
@@ -213,13 +213,13 @@ export default function EmailDownloadModal() {
               <div className="h-12 w-12 rounded-full bg-green-100 dark:bg-green-900 flex items-center justify-center">
                 <Check className="h-6 w-6 text-green-600 dark:text-green-300" />
               </div>
-              <p className="text-center dark:text-slate-300">Dziękuję 🤝</p>
+              <p className="text-center dark:text-slate-300">Thank you 🤝</p>
               <Button
                 variant="outline"
                 onClick={handleReset}
                 className="mt-6 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800"
               >
-                Zamknij
+                Close
               </Button>
             </div>
           ) : (
@@ -233,7 +233,7 @@ export default function EmailDownloadModal() {
                   id="email"
                   type="email"
                   autoComplete="email"
-                  placeholder="twój@email.pl"
+                  placeholder="your@email.com"
                   value={email}
                   onChange={(e) => {
                     setEmail(e.target.value);
@@ -245,7 +245,7 @@ export default function EmailDownloadModal() {
                 />
                 {!isValid && (
                   <p className="text-sm text-red-500 dark:text-red-400">
-                    Wprowadź poprawny adres e-mail!
+                    Please enter a valid email address!
                   </p>
                 )}
               </div>
@@ -266,7 +266,7 @@ export default function EmailDownloadModal() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <Label className="dark:text-slate-300">
-                    Dokończ sekwencję
+                    Complete the sequence
                   </Label>
                   <button
                     type="button"
@@ -275,10 +275,10 @@ export default function EmailDownloadModal() {
                       setCaptchaError(false);
                     }}
                     className="inline-flex items-center gap-1 text-xs text-slate-500 hover:text-slate-300 transition-colors"
-                    aria-label="Wygeneruj nową zagadkę"
+                    aria-label="Generate a new puzzle"
                   >
                     <RefreshCw className="h-3 w-3" />
-                    Generuj nową
+                    Generate new
                   </button>
                 </div>
 
@@ -288,9 +288,9 @@ export default function EmailDownloadModal() {
                     shake ? "animate-[shake_0.4s_ease-in-out]" : ""
                   }`}
                   role="img"
-                  aria-label={`Sekwencja: ${puzzle?.sequence
+                  aria-label={`Sequence: ${puzzle?.sequence
                     .map((e) => puzzle.labels[e])
-                    .join(", ")}, następnie znak zapytania`}
+                    .join(", ")}, then a question mark`}
                 >
                   {puzzle?.sequence.map((emoji, i) => (
                     <span
@@ -336,7 +336,7 @@ export default function EmailDownloadModal() {
 
                 {captchaError && (
                   <p className="text-sm text-red-500 dark:text-red-400">
-                    Niepoprawnie — wygenerowano nową sekwencję. Spróbuj ponownie.
+                    Incorrect — a new sequence has been generated. Try again.
                   </p>
                 )}
               </div>
@@ -348,7 +348,7 @@ export default function EmailDownloadModal() {
                   className="dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700 disabled:opacity-50"
                 >
                   <Download className="mr-2 h-4 w-4" />
-                  Pobierz
+                  Download
                 </Button>
               </div>
             </form>

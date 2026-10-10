@@ -112,7 +112,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Nieszablonowe pomysły na stronę internetową
+          Out-of-the-box ideas for your website
         </motion.p>
 
         <div className="flex flex-row gap-12 mt-12">
@@ -125,7 +125,7 @@ export default function Hero() {
             <Link href="/portfolio">
               <p className="flex flex-row items-center text-lg transition-all group-hover:text-white/60">
                 <BookOpenCheck className="mr-3 w-6 h-6 group-hover:scale-110" />
-                Moje projekty
+                My projects
               </p>
             </Link>
           </motion.button>
@@ -139,7 +139,7 @@ export default function Hero() {
             <Link href="/info">
               <p className="flex flex-row items-center text-lg transition-all duration-300 group-hover:text-white/60">
                 <LandPlot className="mr-3 w-6 h-6 group-hover:scale-105" />
-                Więcej o mnie
+                More about me
               </p>
             </Link>
           </motion.button>
@@ -150,8 +150,8 @@ export default function Hero() {
         <div className="mx-auto px-4">
           <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
             <p className="text-sm text-gray-400">
-              © {new Date().getFullYear()} Jędrzej Pomianowski. Wszelkie prawa
-              zastrzeżone.{" "}
+              © {new Date().getFullYear()} Jędrzej Pomianowski. All rights
+              reserved.{" "}
               <span
                 onClick={handleSpeed}
                 className="cursor-pointer hover:text-white italic"

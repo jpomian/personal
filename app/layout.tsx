@@ -8,7 +8,7 @@ const quanti = Chakra_Petch({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "[jpomian]",
-  description: "Specjalista technologii internetowych web2/web3 Jędrzej Pomianowski",
+  description: "Web2/Web3 internet technology specialist, Jędrzej Pomianowski",
 };
 
 export default function RootLayout({

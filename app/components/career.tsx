@@ -9,7 +9,7 @@ const milestones = [
   {
     year: "2018",
     title: "Junior Developer",
-    company: "TechStart Sp. z o.o.",
+    company: "TechStart LLC",
     location: "Olsztyn",
     description:
       "Began career building internal tooling and REST APIs. Worked primarily with Node.js and PostgreSQL. Contributed to the migration of legacy systems to modern cloud infrastructure.",
@@ -28,7 +28,7 @@ const milestones = [
     year: "2022",
     title: "Senior Engineer",
     company: "DataBridge S.A.",
-    location: "Warszawa",
+    location: "Warsaw",
     description:
       "Responsible for designing scalable microservices handling real-time data pipelines. Drove adoption of automated testing practices and reduced deployment times by 40%.",
     tags: ["Microservices", "Kafka", "CI/CD"],
@@ -136,7 +136,7 @@ export default function Career() {
             className="inline-flex items-center text-gray-400 hover:text-white transition-colors group"
           >
             <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-            <span>Powrót</span>
+            <span>Back</span>
           </Link>
         </motion.div>
 
@@ -147,8 +147,8 @@ export default function Career() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Doświadczenie</p>
-          <h1 className="text-3xl font-bold tracking-tight text-white">Ścieżka kariery</h1>
+          <p className="text-xs uppercase tracking-widest text-gray-500 mb-2">Experience</p>
+          <h1 className="text-3xl font-bold tracking-tight text-white">Career path</h1>
         </motion.div>
 
         {/* Timeline */}

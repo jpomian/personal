@@ -113,7 +113,7 @@ export default function About() {
               className="inline-flex items-center text-gray-400 hover:text-white transition-colors group"
             >
               <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-              <span>Powrót</span>
+              <span>Back</span>
             </Link>
 
             <div className="flex gap-6">
@@ -146,7 +146,7 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Kim jestem
+              Who I am
             </motion.h2>
             <motion.p
               className="text-gray-300 leading-relaxed text-base"
@@ -154,8 +154,8 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moje imię już znasz, dowiesz się teraz trochę o mojej osobie. 
-              Jestem uważnym <strong>webmasterem</strong>, praktykującym <strong>matematykiem</strong>, amatorskim <strong>grafikiem</strong> oraz <strong>inwestorem</strong> aktywów nowoczesnych.
+              You already know my name, now let me tell you a bit about myself.
+              I am an attentive <strong>webmaster</strong>, a practicing <strong>mathematician</strong>, an amateur <strong>graphic designer</strong>, and an <strong>investor</strong> in modern assets.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-base"
@@ -163,9 +163,9 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Urodzony w Olsztynie, szukam wyzwań i nowych doświadczeń w dużych miastach w Polsce i za granicą. Jestem zainteresowany długoterminowym 
-              <strong> upskillingiem</strong> i <strong>reskillingiem</strong> swoich umiejętności.
-              Wierzę, że wiedza i zdolności, które zdobyłem na swojej ścieżce prywatnej i zawodowej to <strong>kapitał</strong>, który nie może zostać mi odebrany. 
+              Born in Olsztyn, I seek challenges and new experiences in major cities across Poland and abroad. I am interested in the long-term
+              <strong> upskilling</strong> and <strong>reskilling</strong> of my abilities.
+              I believe that the knowledge and skills I have gained on my personal and professional journey are <strong>capital</strong> that can never be taken away from me.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-base"
@@ -173,9 +173,9 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moją specjalizacją są technologie rozproszone, w szczególności technologia <strong>blockchain</strong>. 
-              Brałem udział w hackatonach, gdzie projektowałem aplikacje tworząc realne przypadki użycia. 
-              Więcej o tym możesz znaleźć w moim <Link href="/portfolio" className="underline decoration-dashed text-gray-100 hover:opacity-70 transition duration-300">portfolio</Link>.  
+              My specialization is distributed technologies, in particular <strong>blockchain</strong> technology.
+              I have participated in hackathons where I designed applications creating real-world use cases.
+              You can find out more about this in my <Link href="/portfolio" className="underline decoration-dashed text-gray-100 hover:opacity-70 transition duration-300">portfolio</Link>.
             </motion.p>
           </div>
 
@@ -189,7 +189,7 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              Czym się zajmuję
+              What I do
             </motion.h3>
             <motion.p
               className="text-gray-400 leading-relaxed text-base"
@@ -197,9 +197,9 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-            Tworzenie stron internetowych to tylko jedna ze stron webmasteringu. Dodatkowo zajmuję się hostowaniem, utrzymaniem oraz rozwojem każdej ze stron. 
-            Moje wcześniejsze doświadczenia w tworzeniu i administracji baz danych w trakcie lat licealnych, pomogły mi w czystym utrzymaniu danych.
-            Techniki <strong>DevOps</strong> zastosowane w ramach ekosystemu, wygładzają obsługę wszystkich aplikacji wewnątrz mojego serwera VPS. 
+            Creating websites is only one side of webmastering. I also handle hosting, maintenance, and development of each site.
+            My earlier experience creating and administering databases during high school helped me keep data clean.
+            The <strong>DevOps</strong> techniques applied across the ecosystem smooth out the operation of every application inside my VPS server.
 
             </motion.p>
 
@@ -209,8 +209,8 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-            Jestem w trakcie tworzenia artykułu naukowego we współpracy z <strong>Uniwersytetem Ekonomicznym w Poznaniu</strong>.
-            Publikacja będzie stanowiła rozszerzenie moich badań zawartych w pracy magisterskiej. 
+            I am currently in the process of writing a scientific article in collaboration with the <strong>Poznań University of Economics</strong>.
+            The publication will be an extension of the research I conducted in my master&apos;s thesis.
 
             </motion.p>
 
@@ -220,7 +220,7 @@ export default function About() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-            Hackatony. Mam więcej pomysłów które chciałbym wylać na makietę. Jeżeli szukasz osoby do zespołu, a wiesz że odbywa się taki konkurs, <strong>napisz</strong>!
+            Hackathons. I have more ideas that I would like to pour out into a mockup. If you are looking for a team member and you know a competition is taking place, <strong>reach out</strong>!
 
             </motion.p>
 
@@ -281,7 +281,7 @@ export default function About() {
               <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gray-800">
                 <MapPin className="h-4 w-4 text-gray-300" />
               </div>
-              <p className="text-sm text-gray-400">Olsztyn, Poznań, Warszawa</p>
+              <p className="text-sm text-gray-400">Olsztyn, Poznań, Warsaw</p>
             </motion.div>
           </div>
         </motion.div>
@@ -290,8 +290,8 @@ export default function About() {
           <div className="mx-auto px-4">
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <p className="text-sm text-gray-400">
-                © {new Date().getFullYear()} Jędrzej Pomianowski. Wszelkie prawa
-                zastrzeżone.
+                © {new Date().getFullYear()} Jędrzej Pomianowski. All rights
+                reserved.
               </p>
               <div className="flex gap-6">
                 <a

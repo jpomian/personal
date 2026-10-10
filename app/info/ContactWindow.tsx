@@ -121,7 +121,7 @@ export default function ContactWindow() {
                 className="inline-flex items-center text-gray-400 hover:text-white transition-colors group self-start sm:self-auto"
               >
                 <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-                <span>Powrót</span>
+                <span>Back</span>
               </Link>
 
               <div className="flex gap-6 self-end sm:self-auto">
@@ -153,7 +153,7 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              Kim jestem
+              Who I am
             </motion.h2>
             <motion.p
               className="text-gray-300 leading-relaxed text-sm sm:text-base"
@@ -161,11 +161,11 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moje imię już znasz, dowiesz się teraz trochę o mojej osobie.
-              Jestem dojrzewającym <strong>webmasterem</strong>, praktycznym{" "}
-              <strong>matematykiem</strong>, amatorskim{" "}
-              <strong>grafikiem</strong> oraz <strong>inwestorem</strong>{" "}
-              aktywów nowoczesnych.
+              You already know my name, now let me tell you a bit about myself.
+              I am a maturing <strong>webmaster</strong>, a practical{" "}
+              <strong>mathematician</strong>, an amateur{" "}
+              <strong>graphic designer</strong>, and a modern asset{" "}
+              <strong>investor</strong>.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base"
@@ -173,13 +173,12 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Urodzony w Olsztynie, szukam wyzwań i nowych doświadczeń w dużych
-              miastach w Polsce i za granicą. Jestem zainteresowany
-              długoterminowym
-              <strong> upskillingiem</strong> i <strong>reskillingiem</strong>{" "}
-              swoich umiejętności. Wierzę, że wiedza i zdolności, które zdobyłem
-              na swojej ścieżce prywatnej i zawodowej to{" "}
-              <strong>kapitał</strong>, który nie może zostać mi odebrany.
+              Born in Olsztyn, I seek challenges and new experiences in major
+              cities across Poland and abroad. I am interested in the long-term
+              <strong> upskilling</strong> and <strong>reskilling</strong>{" "}
+              of my abilities. I believe that the knowledge and skills I have
+              gained on my personal and professional journey are{" "}
+              <strong>capital</strong> that can never be taken away from me.
             </motion.p>
             <motion.p
               className="mt-4 text-gray-300 leading-relaxed text-sm sm:text-base"
@@ -187,10 +186,10 @@ export default function ContactWindow() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              Moją specjalizacją są technologie rozproszone, w szczególności
-              technologia <strong>blockchain</strong>. Brałem udział w
-              hackatonach, gdzie projektowałem aplikacje tworząc realne
-              przypadki użycia. Więcej o tym możesz znaleźć w moim{" "}
+              My specialization is distributed technologies, in particular{" "}
+              <strong>blockchain</strong> technology. I have participated in
+              hackathons where I designed applications creating real-world
+              use cases. You can find out more about this in my{" "}
               <Link
                 href="/portfolio"
                 className="underline decoration-dashed text-gray-100 hover:text-lg hover:opacity-70 hover:no-underline transition duration-300"
@@ -210,7 +209,7 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
               >
-                Czym się zajmuję
+                What I do
               </motion.h3>
               <motion.p
                 className="text-gray-400 leading-relaxed text-sm sm:text-base"
@@ -218,14 +217,13 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Tworzenie stron internetowych to tylko jedna ze stron
-                webmasteringu. Dodatkowo zajmuję się hostowaniem, utrzymaniem
-                oraz rozwojem każdej ze stron. Moje wcześniejsze doświadczenia w
-                tworzeniu i administracji baz danych w trakcie lat licealnych,
-                pomogły mi w czystym utrzymaniu danych. Techniki{" "}
-                <strong>DevOps</strong> zastosowane w ramach ekosystemu,
-                wygładzają obsługę wszystkich aplikacji wewnątrz mojego serwera
-                VPS.
+                Creating websites is only one side of webmastering. I also
+                handle hosting, maintenance, and development of each site. My
+                earlier experience creating and administering databases during
+                high school helped me keep data clean. The{" "}
+                <strong>DevOps</strong> techniques applied across the ecosystem
+                smooth out the operation of every application inside my VPS
+                server.
               </motion.p>
 
               <motion.p
@@ -234,10 +232,11 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                Jestem w trakcie tworzenia artykułu naukowego we współpracy z{" "}
-                <strong>Uniwersytetem Ekonomicznym w Poznaniu</strong>.
-                Publikacja będzie stanowiła rozszerzenie moich badań zawartych w
-                pracy magisterskiej.
+                I am currently in the process of writing a scientific article
+                in collaboration with the{" "}
+                <strong>Poznań University of Economics</strong>. The
+                publication will be an extension of the research I conducted in
+                my master&apos;s thesis.
               </motion.p>
 
               <motion.p
@@ -246,9 +245,10 @@ export default function ContactWindow() {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 }}
               >
-                <strong>Hackatony</strong>. Mam więcej pomysłów które chciałbym
-                wylać na makietę. Jeżeli szukasz osoby do zespołu, a wiesz że
-                odbywa się taki konkurs, <strong>napisz</strong>!
+                <strong>Hackathons</strong>. I have more ideas that I would
+                like to pour out into a mockup. If you are looking for a team
+                member and you know a competition is taking place,{" "}
+                <strong>reach out</strong>!
               </motion.p>
             </div>
 
@@ -277,7 +277,7 @@ export default function ContactWindow() {
                       </button>
                     </TooltipTrigger>
                     <TooltipContent side="top">
-                      <p>Adres e-mail</p>
+                      <p>Email address</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -303,7 +303,7 @@ export default function ContactWindow() {
                       </button>
                     </TooltipTrigger>
                     <TooltipContent side="top">
-                      <p>Telefon komórkowy</p>
+                      <p>Mobile phone</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
@@ -329,12 +329,12 @@ export default function ContactWindow() {
                       </button>
                     </TooltipTrigger>
                     <TooltipContent side="top">
-                      <p>Chętnie pracuję tu</p>
+                      <p>Happy to work here</p>
                     </TooltipContent>
                   </Tooltip>
                 </TooltipProvider>
                 <p className="text-xs sm:text-sm text-gray-400 text-wrap hover:text-white transition-colors">
-                  [Olsztyn, Poznań, Warszawa, Rzeszów, Wrocław]
+                  [Olsztyn, Poznań, Warsaw, Rzeszów, Wrocław]
                 </p>
               </motion.div>
             </div>

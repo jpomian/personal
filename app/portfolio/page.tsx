@@ -21,7 +21,7 @@ export default function Portfolio() {
 
         <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">
           <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-          <span>Powrót</span>
+          <span>Back</span>
         </Link>
 
         <header className="flex flex-col items-center justify-center mb-12">
@@ -29,20 +29,20 @@ export default function Portfolio() {
             Portfolio
           </h1>
           <p className="text-gray-400 text-center text-lg max-w-2xl">
-            Aplikacje podzielono na te z wykorzystaniem łańcucha bloków (<span className="font-semibold">Web 3</span>), oraz aplikacje tradycyjne bez
-            integracji z łańcuchem bloków (<span className="font-semibold">Web 2</span>).
+            The applications are divided into those built on the blockchain (<span className="font-semibold">Web 3</span>) and traditional applications
+            without blockchain integration (<span className="font-semibold">Web 2</span>).
           </p>
 
           <p className="text-gray-400/60 text-center text-md max-w-2xl mt-6">
-            Przycisk <span className="italic mr-1">Zobacz więcej</span> przekierowuje do strony projektu.
+            The <span className="italic mr-1">See more</span> button takes you to the project&apos;s website.
           </p>
         </header>
 
         <Tabs defaultValue="all" className="mb-8" onValueChange={setActiveTab}>
           <TabsList className="bg-gray-900 border border-gray-800">
-            <TabsTrigger value="all">Wszystkie projekty</TabsTrigger>
+            <TabsTrigger value="all">All projects</TabsTrigger>
             <TabsTrigger value="blockchain">Blockchain (Web 3)</TabsTrigger>
-            <TabsTrigger value="trad">Tradycyjne (Web 2)</TabsTrigger>
+            <TabsTrigger value="trad">Traditional (Web 2)</TabsTrigger>
           </TabsList>
 
           <TabsContent value="all" className="mt-6">
