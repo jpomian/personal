@@ -11,17 +11,14 @@ export default function LanguageSelector() {
   const enUrl = `https://en.jpomian.pl${pathname}`;
   const plUrl = `https://jpomian.pl${pathname}`;
 
-  // Check current language
-  const isEnglish = currentHost.startsWith("en.");
-
   return (
     <div className="absolute top-6 right-12 z-50">
       <ul className="flex flex-row gap-6 md:text-xl">
         <li>
           <a
             href={plUrl}
-            className={!isEnglish ? "text-red-600 cursor-default" : "text-white hover:text-gray-400 duration-300"}
-            aria-current={!isEnglish ? "page" : undefined}
+            className="text-white hover:text-gray-400 duration-300"
+            aria-current={undefined}
           >
             PL
           </a>
@@ -29,8 +26,8 @@ export default function LanguageSelector() {
         <li>
           <a
             href={enUrl}
-            className={isEnglish ? "text-blue-600 cursor-default" : "text-white hover:text-gray-400 duration-300"}
-            aria-current={isEnglish ? "page" : undefined}
+            className="text-blue-600 cursor-default"
+            aria-current="page"
           >
             EN
           </a>
