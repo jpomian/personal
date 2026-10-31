@@ -4,8 +4,6 @@ import { usePathname } from "next/navigation";
 
 export default function LanguageSelector() {
   const pathname = usePathname();
-  const currentHost = 
-    typeof window !== "undefined" ? window.location.hostname : "";
 
   // Create URLs with current path
   const enUrl = `https://en.jpomian.pl${pathname}`;
@@ -26,7 +24,7 @@ export default function LanguageSelector() {
         <li>
           <a
             href={enUrl}
-            className="text-blue-600 cursor-default"
+            className="text-blue-500 cursor-default"
             aria-current="page"
           >
             EN
