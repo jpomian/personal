@@ -6,7 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ArrowLeft } from "lucide-react"
 import { projects } from "./data/projects"
 import { ProjectCard } from "@/components/ui/project-card"
-import Footer from "../components/footer"
+import FooterWide from "../components/footer-wide"
 import type { Project } from "./types/project"
 
 export default function Portfolio() {
@@ -78,7 +78,7 @@ export default function Portfolio() {
           </TabsContent>
         </Tabs>
       </div>
-      <Footer />
+      <FooterWide />
     </div>
   )
 }

@@ -1,11 +1,11 @@
 import ContactWindow from "./ContactWindow"
-import Footer from "../components/footer"
+import FooterWide from "../components/footer-wide"
 
 export default function Page() {
   return (
     <main className="min-h-screen bg-black text-white">
       <ContactWindow />
-      <Footer />
+      <FooterWide />
     </main>
   )
 }
