@@ -42,16 +42,20 @@ export default function VeriFlex() {
           className="inline-flex text-gray-400 hover:text-white transition-colors group"
         >
           <ArrowLeft className="h-5 w-5 mr-2 transition-transform group-hover:-translate-x-1" />
-          <span>Powrót do portfolio</span>
+          <span>Powrót</span>
         </Link>
 
-        <header className="flex flex-col items-center justify-center mb-12 text-center">
+        <header className="flex flex-col items-center justify-center mb-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-400 to-purple-300 text-transparent bg-clip-text">
             VeriFlex
           </h1>
-          <p className="text-gray-400 text-lg max-w-2xl">
-            Zwycięska aplikacja z Franklin Templeton Blockchain Contest — III edycja.
-            Generowanie tokenów przywiązanych do duszy (SBT) z dowodem z wiedzą zerową.
+          <p className="flex items-stretch gap-8 text-gray-400 text-lg max-w-2xl">
+            <a href="https://www.linkedin.com/in/jpomian/" className="hover:text-white">
+            Aplikacja
+          </a>
+          <a href="https://www.linkedin.com/in/jpomian/" className="hover:text-white">
+            Kod źródłowy
+          </a>
           </p>
         </header>
 
@@ -158,7 +162,7 @@ export default function VeriFlex() {
             <div className="mt-6">
               <div className="overflow-hidden rounded-lg border border-gray-800">
                 <Image
-                  src="https://i.imgur.com/mVsMELi.jpeg"
+                  src="/final-stand-veriflex.jpeg"
                   alt="Werdykt konkursu — projekt VeriFlex zajmuje I miejsce"
                   width={1200}
                   height={900}
