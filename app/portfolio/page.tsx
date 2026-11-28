@@ -16,7 +16,7 @@ export default function Portfolio() {
     activeTab === "all" ? projects : projects.filter((project: Project) => project.category === activeTab)
 
   return (
-    <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-6 md:p-10">
+    <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-6 pb-0 md:p-10 md:pb-0">
       <div className="max-w-7xl mx-auto relative">
 
         <Link href="/" className="inline-flex text-gray-400 hover:text-white transition-colors group">

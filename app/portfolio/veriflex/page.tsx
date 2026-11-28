@@ -6,7 +6,6 @@ import {
   FileText,
   History,
   Lightbulb,
-  Play,
   ShieldCheck,
   Trophy,
 } from "lucide-react"
@@ -34,7 +33,7 @@ function Section({
 
 export default function VeriFlex() {
   return (
-    <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-6 md:p-10">
+    <div className="dark min-h-screen bg-gradient-to-b from-gray-900 to-black text-gray-100 p-6 pb-0 md:p-10 md:pb-0">
       <div className="max-w-6xl mx-auto">
 
         <Link
@@ -49,12 +48,12 @@ export default function VeriFlex() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-slate-400 to-purple-300 text-transparent bg-clip-text">
             VeriFlex
           </h1>
-          <p className="flex items-stretch gap-8 text-gray-400 text-lg max-w-2xl">
+          <p className="flex items-baseline gap-8 text-gray-400 text-lg max-w-xl">
             <a href="https://www.linkedin.com/in/jpomian/" className="hover:text-white">
             Aplikacja
           </a>
           <a href="https://www.linkedin.com/in/jpomian/" className="hover:text-white">
-            Kod źródłowy
+            Kod źródłowy (z instrukcją)
           </a>
           </p>
         </header>
@@ -115,10 +114,7 @@ export default function VeriFlex() {
               że właściciel tokena ma ponad 18 lat; nie są ujawniane żadne dane dotyczące dokładnego
               wieku.
             </p>
-          </Section>
-
-          <Section icon={Play} title="Demo">
-            <div className="relative w-full overflow-hidden rounded-lg border border-gray-800 pb-[56.25%]">
+            <div className="mt-3 relative w-full overflow-hidden rounded-lg border border-gray-800 pb-[56.25%]">
               <iframe
                 src="https://www.youtube.com/embed/gAxI__F74uA"
                 title="Demo aplikacji VeriFlex"
@@ -134,7 +130,7 @@ export default function VeriFlex() {
 
           <Section icon={FileText} title="Dokumentacja">
             <p className="text-gray-300 leading-relaxed">
-              Dokumentacja i techniczny opis działania mechanizmu tokenów przywiązanych do duszy
+              Dokumentacja działania mechanizmu tokenów przywiązanych do duszy
               jest opisana w{" "}
               <a
                 href="/vf-tech.pdf"
@@ -146,6 +142,16 @@ export default function VeriFlex() {
               </a>
               .
             </p>
+            <div className="mt-3 overflow-hidden rounded-lg border border-gray-800">
+            <Image
+              src="/veriflex-business-preposition.png"
+              alt="Wartość biznesowa projektu"
+              width={1200}
+              height={900}
+              className="w-full object-cover"
+            />
+            </div>
+            <p className="mt-3 text-center text-sm italic text-gray-500">Propozycja biznesowa VeriFlex</p>
           </Section>
 
           <Section icon={Trophy} title="Werdykt">
@@ -169,7 +175,7 @@ export default function VeriFlex() {
                   className="w-full object-cover"
                 />
               </div>
-              <p className="mt-3 text-center text-sm italic text-gray-500">Werdykt</p>
+              <p className="my-3 text-center text-sm italic text-gray-500">Werdykt</p>
               <p className="text-gray-300 leading-relaxed">
               Mimo prężnie rozwijającej się technologii, użyteczność dowodów z wiedzą zerową nadal
               nie została w pełni wyeksploatowana, a VeriFlex ma potencjał aby walor, który dość

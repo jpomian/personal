@@ -17,6 +17,7 @@ export const projects: Project[] = [
     estimatedTime: "12 tygodni",
     tags: ["React", "TypeScript", "Tailwind CSS", "Python", "Immutable zkEVM"],
     url: "https://gogdex.com",
+    path: "gogdex",
     category: "blockchain",
   },
   {
@@ -29,6 +30,7 @@ export const projects: Project[] = [
     estimatedTime: "Tydzień",
     tags: ["React", "TypeScript", "NextJS", "SVG"],
     url: "https://runics.vercel.app",
+    path: "runics",
     category: "trad",
   },
   {
@@ -41,6 +43,7 @@ export const projects: Project[] = [
     estimatedTime: "4 tygodnie",
     tags: ["React", "NextJS", "Tailwind CSS", "Cheerio", "Redix"],
     url: "https://nieruchomoscipodparasolem.pl",
+    path: "npp",
     category: "trad",
   },
   {
@@ -53,6 +56,7 @@ export const projects: Project[] = [
     estimatedTime: "3 tygodnie",
     tags: ["React", "TypeScript", "Chakra UI", "RainbowKit", "Hardhat", "Circom", "Arbitrum"],
     url: "https://veriflex.vercel.app",
+    path: "veriflex",
     category: "blockchain",
   },
   {
@@ -65,6 +69,7 @@ export const projects: Project[] = [
     estimatedTime: "2 tygodnie",
     tags: ["HTML", "CSS", "JavaScript", "MySQL", "PHP"],
     url: "https://csbiohazard.vercel.app",
+    path: "biohazard",
     category: "trad",
   },
   {
@@ -77,6 +82,7 @@ export const projects: Project[] = [
     estimatedTime: "8 tygodni",
     tags: ["React", "NextJS", "TypeScript", "Hardhat", "Solidity", "Arbitrum"],
     url: "https://2forge.vercel.app",
+    path: "2forge",
     category: "blockchain",
   },
 ]

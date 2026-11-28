@@ -19,7 +19,7 @@ export function ProjectCard({ project }: { project: Project }) {
               </Link>
               <span
                 className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
-                absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center"
+                absolute right-0 translate-y-full opacity-0 text-center"
               >
                 Odwiedź stronę
               </span>
@@ -42,7 +42,7 @@ export function ProjectCard({ project }: { project: Project }) {
               <span className="text-sm font-medium">{project.estimatedTime}</span>
               <span
                 className="group-hover:opacity-100 transition-opacity bg-gray-800/80 px-3 py-2 text-sm min-w-[200px] text-gray-100 rounded-md 
-                absolute left-1/2 -translate-x-1/2 translate-y-full opacity-0 mx-auto text-center"
+                absolute right-0 translate-y-full opacity-0 text-center"
               >
                 Czas wykonania
               </span>
@@ -69,11 +69,11 @@ export function ProjectCard({ project }: { project: Project }) {
           </CardContent>
 
           <CardFooter className="pt-0">
-            <a href={project.url}>
+            <Link href={`portfolio/${project.path}`}>
               <button className="text-purple-400 hover:text-purple-300 text-sm font-medium transition-colors">
                 Zobacz więcej →
               </button>
-            </a>
+            </Link>
           </CardFooter>
         </div>
       </div>

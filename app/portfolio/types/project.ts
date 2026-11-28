@@ -9,6 +9,7 @@ export interface Project {
   estimatedTime: string
   tags: string[]
   url: string
+  path: string
   category: string
 }
 
